@@ -35,7 +35,7 @@ class Form extends Component {
               <form onSubmit={this.handleSubmit} className="col s12">
                 <div className="row">
                   <div className="input-field col s12">
-                    <input type="text" id="name" onChange={this.handleChange}  className="validate"/>
+                    <input type="text" id="name" onChange={this.handleChange} className="validate"/>
                     <label htmlFor="textarea1">Name</label>
                   </div>
                 </div>
