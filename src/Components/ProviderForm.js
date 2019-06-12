@@ -4,7 +4,11 @@ import M from "materialize-css";
 
 class ProviderForm extends Component {
   state = {
-    location: ""
+    location: "",
+    date: "",
+    time: "",
+    service: "",
+    email: ""
   };
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
@@ -40,7 +44,7 @@ class ProviderForm extends Component {
         <div className="row">
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s12">
+              <div className="input-field col s6">
                 <input
                   name="location"
                   id="location"
@@ -50,40 +54,48 @@ class ProviderForm extends Component {
                 />
                 <label for="location">Location</label>
               </div>
+
               <div className="input-field col s6">
-                <input type="text" class="datepicker" />
+                <input name="date" type="text" class="datepicker" />
                 <label for="date">Date last seen</label>
               </div>
               <div className="input-field col s6">
-                <input type="text" class="timepicker" />
+                <input name="time" type="text" class="timepicker" />
                 <label for="time">Time last seen</label>
               </div>
-
-              <div class="input-field col s6">
-                <a
-                  class="dropdown-trigger btn"
-                  href="#dropdown1"
-                  data-target="dropdown1"
-                >
-                  Services
-                </a>
-
-                <ul id="dropdown1" class="dropdown-content">
-                  <li>
-                    <a href="#!">Showers</a>
-                  </li>
-                  <li class="divider" tabindex="-1" />
-                  <li>
-                    <a href="#!">Clothes</a>
-                  </li>
-                  <li class="divider" tabindex="-1" />
-                  <li>
-                    <a href="#!">Shelters</a>
-                  </li>
-                </ul>
+              <div className="input-field col s6">
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  className="validate"
+                  onChange={this.handleChange}
+                />
+                <label for="email">Email for confirmation</label>
               </div>
+              <a
+                className="dropdown-trigger btn col s4 left"
+                href="#dropdown1"
+                data-target="dropdown1"
+              >
+                Services
+              </a>
+
+              <ul id="dropdown1" class="dropdown-content">
+                <li>
+                  <a href="#!">Showers</a>
+                </li>
+                <li class="divider" tabindex="-1" />
+                <li>
+                  <a href="#!">Clothes</a>
+                </li>
+                <li class="divider" tabindex="-1" />
+                <li>
+                  <a href="#!">Shelters</a>
+                </li>
+              </ul>
+              <button className="btn red lighten-1 col s4 right">Create</button>
             </div>
-            <button className="btn red lighten-1">Create</button>
           </form>
         </div>
       </div>
