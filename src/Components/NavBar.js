@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import * as routes from '../constants/routes';
-import { NavLink } from 'react-router-dom';
-import { isExpressionWrapper } from '@babel/types';
+import React, { Component } from "react";
+import * as routes from "../constants/routes";
+import { NavLink } from "react-router-dom";
+import { isExpressionWrapper } from "@babel/types";
 
 class NavBar extends Component {
     render() {
