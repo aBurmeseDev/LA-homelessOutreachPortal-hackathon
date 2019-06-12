@@ -30,23 +30,31 @@ class Form extends Component {
   render() {
     return (
       <div className="container">
-
+        <div className="row">
+          <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
-              <form onSubmit={this.handleSubmit} className="col s12">
-                <div className="row">
-                  <div className="input-field col s12">
-                    <input type="text" id="name" onChange={this.handleChange}  className="validate"/>
-                    <label htmlFor="textarea1">Name</label>
-                  </div>
-                </div>
-              <div className="input-field col s12">
-                <input type="text" id="lastName" onChange={this.handleChange} className="materialize-textarea" />
-                <label htmlFor="texstarea1">Last Name</label>
+              <div className="input-field col s6">
+                <input
+                  id="first_name"
+                  type="text"
+                  className="validate"
+                  onChange={this.handleChange}
+                />
+                <label for="first_name">First Name</label>
               </div>
-              <button className="btn red lighten-1">Create</button>
-            </form>
-          </div>
-
+              <div className="input-field col s6">
+                <input
+                  id="last_name"
+                  type="text"
+                  className="validate"
+                  onChange={this.handleChange}
+                />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <button className="btn red lighten-1">Create</button>
+          </form>
+        </div>
       </div>
     );
   }
