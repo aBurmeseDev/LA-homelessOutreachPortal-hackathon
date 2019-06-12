@@ -1,73 +1,99 @@
 import React, { Component } from "react";
-import landingImg from "../resources/landingimg.jpg";
+import landingImg from "../resources/landing-banner.png";
+import "./Home.css";
+import ProviderForm from "./ProviderForm";
+
 class Home extends Component {
   render() {
     return (
       <div>
+        <div className="request">
+          <button className="help">Looking to help</button>
+          <button className="service">Looking for services</button>
+        </div>
         <div style={{ position: "relative" }}>
           <img
             src={landingImg}
             alt="share"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
-          <button
-            style={{
-              position: "absolute",
-              top: "90%",
-              left: "15%",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              padding: "12px 24px",
-              borderRadius: "5px"
-            }}
-          >
-            Need help?
-          </button>
-          <button
-            style={{
-              position: "absolute",
-              top: "90%",
-              left: "60%",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              padding: "12px 24px",
-              borderRadius: "5px"
-            }}
-          >
-            Provider
-          </button>
+          <div style={{ position: "absolute", top: "5%", left: "10%" }}>
+            <h5 style={{ color: "white" }}>HOW WE WORK?</h5>
+            <span style={{ color: "white" }}>
+              WE CONNECT PEOPLE IN NEED TO SERVICES AND HOUSING{" "}
+            </span>
+          </div>
         </div>
         <div className="row" style={{ textAlign: "center" }}>
-          <h4 style={{ marginTop: "4rem" }}>How we work</h4>
           <div
             style={{
               width: "20rem",
               height: "20rem",
-              borderTop: "1px solid black",
+              borderTospan: "1px solid black",
               borderBottom: "1px solid black",
-              margin: "0 auto"
+              margin: "0 auto",
+              marginTop: "2rem"
             }}
           >
             video
           </div>
-          <h6>what we provide</h6>
+
           <div className="row">
-            <div className="col l4 s4" style={{ textAlign: "center" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            </div>
-            <div className="col l4 s4" style={{ textAlign: "center" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-            </div>
-            <div className="col l4 s4" style={{ textAlign: "center" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            <div>
+              <div className="col s3 left" style={{ marginRight: "1rem" }}>
+                this
+              </div>
+              <p className="col s9 right" style={{ textAlign: "left" }}>
+                LA-HOP is designed to assist people experiencing homelessness in
+                Los Angeles County with outreach services. We’ll use this
+                information to dispatch a homeless services outreach team to the
+                area.
+              </p>
             </div>
           </div>
-        </div>
-        <div className="row" style={{ marginTop: "5rem" }}>
-          <button className="btn waves-effect col l6">Homeless</button>
-          <button className="btn waves-effect col l6">Providers</button>
+          <div className="row">
+            <div className="col s9 right">
+              <p style={{ textAlign: "left" }}>
+                For medical or mental health emergencies, please call 911.
+              </p>
+            </div>
+            <div className="col s3 left" style={{ marginRight: "1rem" }}>
+              this
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s9 right">
+              <p style={{ textAlign: "left" }}>
+                For crime or illegal activity, please contact your local law
+                enforcement agency.
+              </p>
+            </div>
+            <div className="col s3 left" style={{ marginRight: "1rem" }}>
+              this
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s9 right">
+              <p style={{ textAlign: "left" }}>
+                For services like bulky item pickup, illegal dumping or graffiti
+                removal, please contact your municipality.
+              </p>
+            </div>
+            <div className="col s3 left" style={{ marginRight: "1rem" }}>
+              this
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s9 right">
+              <p style={{ textAlign: "left" }}>
+                LA-HOP does not replace homeless encampment reporting protocols.
+                Please contact your municipality.
+              </p>
+            </div>
+            <div className="col s3 left" style={{ marginRight: "1rem" }}>
+              this
+            </div>
+          </div>
         </div>
       </div>
     );
