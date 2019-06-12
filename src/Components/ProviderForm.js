@@ -100,7 +100,7 @@ class ProviderForm extends Component {
                 className="btn red lighten-1 col s4 right modal-trigger"
                 href="#modal1"
               >
-                Create
+                Submit
               </a>
               <div id="modal1" class="modal">
                 <div class="modal-content">
