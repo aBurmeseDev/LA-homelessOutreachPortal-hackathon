@@ -4,7 +4,8 @@ import { Map, GoogleApiWrapper,Marker } from 'google-maps-react';
 
 const mapStyles = {
     width: '50%',
-    height: '50%'
+    height: '50%',
+    located: false
   };
 
 class MapComponent extends Component {
@@ -18,7 +19,8 @@ class MapComponent extends Component {
         navigator.geolocation.getCurrentPosition(
             (position) =>{  this.setState({
                 latitude: position.coords.latitude,
-                longitude: position.coords.longitude
+                longitude: position.coords.longitude,
+                lacated: true
               });
             }
         );
@@ -27,6 +29,7 @@ class MapComponent extends Component {
     render() {
         console.log(this.state)
         return (
+          
             <div className="container">
                 <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
                 <Marker title={"Your Location"} name={'SOMA'} position={{lat: this.state.latitude, lng: this.state.longitude}} />
