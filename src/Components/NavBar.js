@@ -11,12 +11,17 @@ class NavBar extends Component {
         style={{
           backgroundColor: "#ff3300",
           display: "flex",
-          justifyContent: "space-evenly"
+          justifyContent: "space-evenly",
+          lineHeight: "50px"
         }}
       >
-        <NavLink className="brand-logo hide-on-med-and-down" to={"/"}>
-          LA-HOP{" "}
-        </NavLink>
+        <a
+          className="brand-logo hide-on-med-and-down"
+          href="/"
+          style={{ position: "relative" }}
+        >
+          LA-HOP
+        </a>
 
         <ul id="nav-mobile">
           <li

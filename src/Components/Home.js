@@ -8,8 +8,12 @@ class Home extends Component {
     return (
       <div>
         <div className="request">
-          <button className="help">Looking to help</button>
-          <button className="service">Looking for services</button>
+          <a className="btn help" href="/report">
+            Looking to help
+          </a>
+          <a className="btn service" href="/request">
+            Looking for services
+          </a>
         </div>
         <div style={{ position: "relative" }}>
           <img
