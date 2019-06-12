@@ -2,8 +2,8 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAyPadxZSiAvWd1n5rzjRsfZYYHBYtKzXs",
-    authDomain: "gahackathon-95ace.firebaseapp.com",
+    apiKey: process.env.FB_APIKEY,
+    authDomain: process.env.FB_AUTHDOMAIN,
     databaseURL: "https://gahackathon-95ace.firebaseio.com",
     projectId: "gahackathon-95ace",
     storageBucket: "gahackathon-95ace.appspot.com",
