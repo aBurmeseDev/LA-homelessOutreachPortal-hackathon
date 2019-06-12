@@ -18,7 +18,8 @@ class ProviderForm extends Component {
       const instance2 = M.Datepicker.init(elem2);
       const elem3 = document.querySelectorAll(".timepicker");
       const instance3 = M.Timepicker.init(elem3);
-
+      const elem4 = document.querySelectorAll(".modal");
+      const instance4 = M.Modal.init(elem4);
     });
   }
   handleChange = e => {
@@ -95,7 +96,26 @@ class ProviderForm extends Component {
                   <a href="#!">Shelters</a>
                 </li>
               </ul>
-              <button className="btn red lighten-1 col s4 right">Create</button>
+              <a
+                className="btn red lighten-1 col s4 right modal-trigger"
+                href="#modal1"
+              >
+                Create
+              </a>
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="#!"
+                    class="modal-close waves-effect waves-green btn-flat"
+                  >
+                    Agree
+                  </a>
+                </div>
+              </div>
             </div>
           </form>
         </div>
