@@ -4,13 +4,16 @@ import M from "materialize-css";
 
 class ProviderForm extends Component {
   state = {
-    name: "",
-    lastName: ""
+    location: ""
   };
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
-      const elems = document.querySelectorAll(".dropdown-trigger");
-      const instances = M.Dropdown.init(elems);
+      const elem1 = document.querySelectorAll(".dropdown-trigger");
+      const instance1 = M.Dropdown.init(elem1);
+      const elem2 = document.querySelectorAll(".datepicker");
+      const instance2 = M.Datepicker.init(elem2);
+      const elem3 = document.querySelectorAll(".timepicker");
+      const instance3 = M.Timepicker.init(elem3);
     });
   }
   handleChange = e => {
@@ -23,14 +26,12 @@ class ProviderForm extends Component {
 
     const requestRef = firebase.firestore().collection("requests");
     const request = {
-      name: this.state.name,
-      lastName: this.state.lastName
+      location: this.state.location
     };
 
     requestRef.add(request);
     this.setState({
-      name: "",
-      lastName: ""
+      location: ""
     });
   };
   render() {
@@ -39,15 +40,25 @@ class ProviderForm extends Component {
         <div className="row">
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s6">
+              <div className="input-field col s12">
                 <input
+                  name="location"
                   id="location"
                   type="text"
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="first_name">Location</label>
+                <label for="location">Location</label>
               </div>
+              <div className="input-field col s6">
+                <input type="text" class="datepicker" />
+                <label for="date">Date last seen</label>
+              </div>
+              <div className="input-field col s6">
+                <input type="text" class="timepicker" />
+                <label for="time">Time last seen</label>
+              </div>
+
               <div class="input-field col s6">
                 <a
                   class="dropdown-trigger btn"
@@ -59,24 +70,15 @@ class ProviderForm extends Component {
 
                 <ul id="dropdown1" class="dropdown-content">
                   <li>
-                    <a href="#!">one</a>
-                  </li>
-                  <li>
-                    <a href="#!">two</a>
+                    <a href="#!">Showers</a>
                   </li>
                   <li class="divider" tabindex="-1" />
                   <li>
-                    <a href="#!">three</a>
+                    <a href="#!">Clothes</a>
                   </li>
+                  <li class="divider" tabindex="-1" />
                   <li>
-                    <a href="#!">
-                      <i class="material-icons">view_module</i>four
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <i class="material-icons">cloud</i>five
-                    </a>
+                    <a href="#!">Shelters</a>
                   </li>
                 </ul>
               </div>
