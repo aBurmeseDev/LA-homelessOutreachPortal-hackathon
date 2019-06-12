@@ -1,5 +1,7 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import 'firebase/storage'
+
 
 var firebaseConfig = {
     apiKey: process.env.FB_APIKEY,
@@ -13,6 +15,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.firestore();
+firebase.storage();
+
+
 
 
 export default firebase;

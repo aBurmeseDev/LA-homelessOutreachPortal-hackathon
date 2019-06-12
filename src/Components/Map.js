@@ -29,10 +29,7 @@ class MapComponent extends Component {
         return (
             <div className="container">
                 <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
-                <Marker
-                title={"Your Location"}
-                name={'SOMA'}
-                position={{lat: this.state.latitude, lng: this.state.longitude}} />
+                <Marker title={"Your Location"} name={'SOMA'} position={{lat: this.state.latitude, lng: this.state.longitude}} />
                 </Map>
             </div>
 
