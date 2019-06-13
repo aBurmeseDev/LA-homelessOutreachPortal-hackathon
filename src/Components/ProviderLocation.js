@@ -21,9 +21,10 @@ class ProviderLocation extends Component {
   };
 
   render() {
-    const {handleChange} = this.props
+    const { handleChange } = this.props;
     return (
       <div className="row">
+        <div>1 Location</div>
         <div className="row" style={{ position: "relative" }}>
           <Map />
         </div>
@@ -96,12 +97,12 @@ class ProviderLocation extends Component {
             </div>
           </div>
           <button
-            className="btn waves-effect black right"
+            className="btn  waves-effect  right"
             onClick={this.continue}
             type="submit"
             id="location"
             name="action"
-            style={{ marginTop: "2rem" }}
+            style={{ marginTop: "0.1rem", backgroundColor: "#000000" }}
           >
             Continue
             <i class="material-icons right">send</i>
