@@ -57,17 +57,15 @@ class ProviderForm extends Component {
                 <input
                   name="numOfPeople"
                   id="numOfPeople"
-                  type="number"
+                  type="text"
                   className="validate"
                   onChange={handleChange}
                 />
                 <label
                   for="numOfPeople"
-                  style={{
-                    textTransform: "uppercase"
-                  }}
+
                 >
-                  How many people?
+                  Number of people
                 </label>
               </div>
             </div>
