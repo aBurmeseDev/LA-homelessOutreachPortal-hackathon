@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../config/fbConfig.js";
 import M from "materialize-css";
+import submission from "../resources/submission.png";
 import { conditionalExpression } from "@babel/types";
 import "./Form.css";
 
@@ -193,25 +194,25 @@ class Form extends Component {
                   />
                   <label for="textarea1">If other, please specify</label>
                 </div>
+                <div className="input-field col s12">
+                  <div className="file-field input-field">
+                    <div className="red btn">
+                      <span>File Upload</span>
+                      <input type="file" onChange={this.handleImage} multiple />
+                    </div>
+                    <div className="file-path-wrapper">
+                      <input
+                        className="file-path validate"
+                        type="text"
+                        placeholder="Upload one or more files"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="row" />
 
-              <div className="input-field col s6">
-                <div className="file-field input-field">
-                  <div className="red btn">
-                    <span>File</span>
-                    <input type="file" onChange={this.handleImage} multiple />
-                  </div>
-                  <div className="file-path-wrapper">
-                    <input
-                      className="file-path validate"
-                      type="text"
-                      placeholder="Upload one or more files"
-                    />
-                  </div>
-                </div>
-              </div>
               <a
                 className="btn col s4 right modal-trigger"
                 style={{ backgroundColor: "#030303" }}
@@ -221,15 +222,41 @@ class Form extends Component {
               </a>
               <div id="modal2" class="modal">
                 <div class="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
+                  <h6 style={{ fontWeight: "bolder", textAlign: "center" }}>
+                    Your Request Has Been Received:
+                  </h6>
+                  <p style={{ textAlign: "center" }}>Case Number - #435531</p>
+                  <img
+                    src={submission}
+                    alt="submission"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                  <h7
+                    style={{
+                      fontWeight: "bolder",
+                      textAlign: "center",
+                      marginTop: "1rem"
+                    }}
+                  >
+                    WHAT TO DO NEXT:
+                  </h7>
+                  <p>
+                    1. Follow-Up in 2-3 Business Days on{" "}
+                    <a href="https://www.lahsa.org">https://www.lahsa.org </a>
+                    to learn about your status
+                  </p>
+                  <p>
+                    2. Visit LOCATION/RESOURCE{" "}
+                    <a href="https://www.lahsa.org">HERE</a> for additional
+                    assistance
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <a
                     href="#!"
                     class="modal-close waves-effect waves-green btn-flat"
                   >
-                    Agree
+                    Close
                   </a>
                 </div>
               </div>

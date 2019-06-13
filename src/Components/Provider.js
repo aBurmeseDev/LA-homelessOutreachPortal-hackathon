@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route,Link } from "react-router-dom";
 import ProviderContact from "./ProviderContact";
 import ProviderForm from "./ProviderForm";
 import ProviderLocation from "./ProviderLocation";
+import firebase from '../config/fbConfig'
 import "./Provider.css";
 
 
@@ -29,6 +30,18 @@ class Provider extends Component {
         this.setState({
           [e.target.id]: e.target.value
         });
+      };
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log('will try to submit')
+        const requestRef = firebase.firestore().collection("requests");
+        const request = {
+          ...this.state
+        };
+        console.log(request)
+    
+        requestRef.add(request);
+        this.props.history.push("/")
       };
     changeComponent=(e)=>{
         if(e.target.innerHTML ==  "Location"){
@@ -66,7 +79,8 @@ class Provider extends Component {
                 <a className="breadcrumb"><Link onClick={this.changeComponent} style={{
                     fontSize: "12px",
                     textTransform: "uppercase",
-                    color: "#9E9E9E"
+                    color: "#9E9E9E",
+                    textDecoration:"bold"
                 }}>Location</Link></a>
                 <a className="breadcrumb"><Link onClick={this.changeComponent} style={{
                     fontSize: "12px",
@@ -89,7 +103,7 @@ class Provider extends Component {
             ?<ProviderLocation  continue={this.nextComp} getAddress={this.getLocation}/>
             :((this.state.component == 2)
             ?<ProviderForm continue={this.nextComp} handleChange={this.handleChange}/>
-            : <ProviderContact continue={this.nextComp} handleChange={this.handleChange}/>)}
+            : <ProviderContact continue={this.nextComp} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />)}
         </div>
             </BrowserRouter>
         

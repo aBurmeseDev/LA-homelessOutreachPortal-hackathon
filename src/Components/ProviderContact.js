@@ -65,11 +65,11 @@ class ProviderContact extends Component {
         </div>
 
         <button
-          className="btn waves-effect right modal-trigger"
+          className="btn  waves-effect right modal-trigger"
           id="location"
           name="action"
           data-target="modal9"
-          style={{ backgroundColor: "#ff3300" }}
+          style={{ backgroundColor: "#000000	" }}
         >
           Sumbit<i class="material-icons right">send</i>{" "}
         </button>
@@ -80,7 +80,6 @@ class ProviderContact extends Component {
           </div>
           <div class="modal-footer">
             <a
-              href="#!"
               className="modal-close waves-effect waves-green btn-flat"
             >
               Agree

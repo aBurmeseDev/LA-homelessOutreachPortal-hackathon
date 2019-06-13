@@ -160,7 +160,7 @@ class ProviderForm extends Component {
               type="submit"
               id="location"
               name="action"
-              style={{ marginTop: "2rem", backgroundColor: "#ff3300" }}
+              style={{ marginTop: "2rem", backgroundColor: "#000000" }}
             >
               Continue
               <i class="material-icons right">send</i>
