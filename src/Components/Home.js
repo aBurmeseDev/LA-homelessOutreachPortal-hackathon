@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import landingImg from "../resources/landing-banner.png";
+import heart from "../resources/heart.png";
+import hospital from "../resources/hospital.png";
+import police from "../resources/police.png";
+import tent from "../resources/tent.png";
+import truck from "../resources/truck.png";
 import "./Home.css";
+import About from "./About";
 import ProviderForm from "./ProviderForm";
 
 class Home extends Component {
@@ -49,7 +55,11 @@ class Home extends Component {
           <div className="row">
             <div>
               <div className="col s3 left" style={{ marginRight: "1rem" }}>
-                this
+                <img 
+                  src={heart}
+                  alt="heart"
+                  style={{ height: "5rem" }}
+                />
               </div>
               <p className="col s9 right" style={{ textAlign: "left" }}>
                 LA-HOP is designed to assist people experiencing homelessness in
@@ -103,6 +113,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <About />
       </div>
     );
   }
