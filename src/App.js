@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import MapComponent from "./Components/Map";
+import Resources from "./Components/Resources"
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
@@ -36,7 +37,7 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route exact path="/maps" component={MapComponent} />
+          <Route exact path="/maps" component={Resources} />
           <Route exact path="/request" component={Form} />
           <Route exact path="/report" component={ProviderForm} />
           <Route exact path="/" component={Home} />

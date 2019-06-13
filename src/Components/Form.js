@@ -94,15 +94,6 @@ class Form extends Component {
               </div>
               <div className="row">
           
-        </div>
-              <div className="input-field col s6">
-               <div className="file-field input-field">
-                <div className="red btn">
-                  <span>File</span>
-                  <input type="file" onChange={this.handleImage} multiple />
-
-                </div>
-              </div>
               <div className="input-field col s6">
                 <div className="file-field input-field">
                   <div className="red btn">
@@ -139,6 +130,7 @@ class Form extends Component {
                 </a>
               </div>
             </div>
+            </div>
           </form>
         </div>
       </div>
@@ -146,4 +138,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Form
