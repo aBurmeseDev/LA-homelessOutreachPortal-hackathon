@@ -17,8 +17,10 @@ class Contact extends Component {
     return (
       <div className="container">
         <div className="row">
-          <h4 style={{ textTransform: "uppercase" }}>Contact Us</h4>
-          <h5>We want to hear from you</h5>
+          <h5 style={{ textTransform: "uppercase", marginTop: "4rem" }}>
+            Contact Us
+          </h5>
+          <h6>We want to hear from you</h6>
           <div className="divider" />
           <br />
           <form className="col l8 s12">
@@ -33,7 +35,6 @@ class Contact extends Component {
                     Homeless Management Information System (HMIS)
                   </option>
                   <option value="3">Grievances</option>
-                  
                 </select>
                 <label>Select From The Dropdown Menu</label>
               </div>
@@ -64,7 +65,7 @@ class Contact extends Component {
             </div>
             <a
               className="btn col s4 right modal-trigger"
-              style = {{ backgroundColor: "#030303" }}
+              style={{ backgroundColor: "#030303" }}
               href="#modal3"
             >
               Submit
