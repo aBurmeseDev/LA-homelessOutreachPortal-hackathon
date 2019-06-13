@@ -109,19 +109,6 @@ class ProviderForm extends Component {
                     </label>
                   </p>
                 </form>
-                {/* <div className="btn col s1">
-                  <label for="male" style={{
-                    color: "white"
-                  }}
-                  >Male</label>
-                </div>
-
-                <div className="btn col s1">
-                  <label for="female" style={{
-                    color: "white"
-                  }}
-                  >Female</label>
-                </div> */}
               </div>
 
               <div className="row">
