@@ -3,6 +3,7 @@ import * as routes from "../constants/routes";
 import { NavLink } from "react-router-dom";
 import { isExpressionWrapper } from "@babel/types";
 import M from "materialize-css";
+import "./NavBar.css";
 
 class NavBar extends Component {
   componentDidMount() {
