@@ -24,11 +24,11 @@ class ProviderForm extends Component {
       const instance4 = M.Modal.init(elem4);
     });
   }
-  handleChange = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
-  };
+  // handleChange = e => {
+  //   this.setState({
+  //     [e.target.id]: e.target.value
+  //   });
+  // };
   handleSubmit = e => {
     e.preventDefault();
 
@@ -47,6 +47,7 @@ class ProviderForm extends Component {
     this.props.continue();
   };
   render() {
+    const {handleChange} = this.props
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
@@ -71,11 +72,12 @@ class ProviderForm extends Component {
                 </label>
               </div>
             </div>
-
-            <div className="row">
-              <div className="input-field col s6">
-                <input name="date" type="text" className="datepicker" />
-                <label for="date">Name of person/people</label>
+              
+              <div className="row">
+                <div className="input-field col s6">
+                  <input name="date" type="text" id="name"className="datepicker" onChange={handleChange}/>
+                  <label for="date">Name of person/people</label>
+                </div>
               </div>
             </div>
 
@@ -112,6 +114,7 @@ class ProviderForm extends Component {
               </form>
             </div>
 
+<<<<<<< HEAD
             <div className="row">
               <div className="input-field col s6">
                 <input
@@ -121,9 +124,24 @@ class ProviderForm extends Component {
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 />
                 <label for="phone">Contact number</label>
+=======
+              <div className="row">
+                <div className="input-field col s6">
+                  <input 
+                    name="phone" 
+                    type="tel" 
+                    id="number"
+                    className="datepicker" 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    onChange={handleChange}
+                  />
+                  <label for="phone">Contact number</label>
+                </div>
+>>>>>>> master
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="row">
               <div className="input-field col s6">
                 <input
@@ -139,6 +157,30 @@ class ProviderForm extends Component {
               <div className="input-field col s6">
                 <input name="details" type="text" className="timepicker" />
                 <label for="details">Additional Details</label>
+=======
+              <div className="row">
+                <div className="input-field col s6">
+                  <input
+                    name="needs"
+                    id="service"
+                    type="text"
+                    className="validate"
+                    onChange={handleChange}
+                  />
+                  <label for="needs">Service needed</label>
+                </div>
+
+                <div className="input-field col s6">
+                <input 
+                  name="details" 
+                  type="text" 
+                  className="timepicker" 
+                  onChange={handleChange}
+                />
+               
+                  <label for="details">Additional Details</label>
+                </div>
+>>>>>>> master
               </div>
             </div>
 

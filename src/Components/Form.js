@@ -129,7 +129,7 @@ class Form extends Component {
                 </form>
               </div>
 
-              <div class="input-field col s6">
+              <div className="input-field col s6">
                 <select multiple>
                   <option value="" disabled style={{ fontSize: "7px" }}>
                     What do you need?
@@ -145,7 +145,7 @@ class Form extends Component {
               </div>
 
               <div className="row">
-                <div class="input-field col s12">
+                <div className="input-field col s12">
                   <textarea
                     id="textarea1"
                     placeholder="Please specify"
@@ -170,7 +170,7 @@ class Form extends Component {
                 <label>How long have you been experiencing homelessness?</label>
               </div>
 
-              <div class="input-field col s6">
+              <div className="input-field col s6">
                 <select>
                   <option value="" disabled selected>
                     Select below
@@ -184,7 +184,7 @@ class Form extends Component {
               </div>
 
               <div className="row">
-                <div class="input-field col s12">
+                <div className="input-field col s12">
                   <textarea
                     id="textarea1"
                     placeholder="Please specify"
