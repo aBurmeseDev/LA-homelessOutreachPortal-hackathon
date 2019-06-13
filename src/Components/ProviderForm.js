@@ -58,11 +58,12 @@ class ProviderForm extends Component {
               </div>
 
               <div className="input-field col s6">
-                <input name="date" type="text" class="datepicker" />
+                <input name="date" type="text" className="datepicker" />
                 <label for="date">Date last seen</label>
               </div>
+
               <div className="input-field col s6">
-                <input name="time" type="text" class="timepicker" />
+                <input name="time" type="text" className="timepicker" />
                 <label for="time">Time last seen</label>
               </div>
               <div className="input-field col s6">
@@ -83,34 +84,31 @@ class ProviderForm extends Component {
                 Services
               </a>
 
-              <ul id="dropdown1" class="dropdown-content">
+              <ul id="dropdown1" className="dropdown-content">
                 <li>
                   <a href="#!">Showers</a>
                 </li>
-                <li class="divider" tabindex="-1" />
+                <li className="divider" tabindex="-1" />
                 <li>
                   <a href="#!">Clothes</a>
                 </li>
-                <li class="divider" tabindex="-1" />
+                <li className="divider" tabindex="-1" />
                 <li>
                   <a href="#!">Shelters</a>
                 </li>
               </ul>
-              <a
-                className="btn red lighten-1 col s4 right modal-trigger"
-                href="#modal1"
-              >
+              <a className="btn red lighten-1 col s4 right modal-trigger" href="#modal1">
                 Submit
               </a>
-              <div id="modal1" class="modal">
-                <div class="modal-content">
+              <div id="modal1" className="modal">
+                <div className="modal-content">
                   <h4>Modal Header</h4>
                   <p>A bunch of text</p>
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <a
                     href="#!"
-                    class="modal-close waves-effect waves-green btn-flat"
+                    className="modal-close waves-effect waves-green btn-flat"
                   >
                     Agree
                   </a>
