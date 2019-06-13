@@ -17,11 +17,18 @@ function App() {
             backgroundColor: "#ff3300",
             textAlign: "center",
             height: "4rem",
-            padding: "1.5rem 0"
+            padding: "1.5rem 0",
+            backgroundColor: "#030303"
           }}
           className="hide-on-med-and-up"
         >
-          <a href="/" style={{ color: "white", cursor: "pointer" }}>
+          <a
+            href="/"
+            style={{
+              color: "white",
+              cursor: "pointer"
+            }}
+          >
             LA-HOP
           </a>
         </div>
