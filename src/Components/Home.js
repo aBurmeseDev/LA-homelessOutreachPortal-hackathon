@@ -146,69 +146,14 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          {/* <div className="row">
-            <div>
-              <div className="col s3 left" style={{ paddingTop: "1rem" }}>
-                <img src={heart} alt="heart" style={{ height: "3rem" }} />
-              </div>
-              <p className="col s9 right" style={{ textAlign: "left" }}>
-                LA-HOP is designed to assist people experiencing homelessness in
-                Los Angeles County with outreach services. We’ll use this
-                information to dispatch a homeless services outreach team to the
-                area.
-              </p>
-            </div>
-          </div> */}
-          {/* <div className="row">
-            <div className="col s9 right">
-              <p style={{ textAlign: "left" }}>
-                For medical or mental health emergencies, please call 911.
-              </p>
-            </div>
-            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
-              <img src={hospital} alt="hospital" style={{ height: "3rem" }} />
-            </div>
-          </div> */}
-          {/* <div className="row">
-            <div className="col s9 right">
-              <p style={{ textAlign: "left" }}>
-                For crime or illegal activity, please contact your local law
-                enforcement agency.
-              </p>
-            </div>
-            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
-              <img src={police} alt="police" style={{ height: "3rem" }} />
-            </div>
-          </div> */}
-          {/* <div className="row">
-            <div className="col s9 right">
-              <p style={{ textAlign: "left" }}>
-                For services like bulky item pickup, illegal dumping or graffiti
-                removal, please contact your municipality.
-              </p>
-            </div>
-            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
-              <img src={truck} alt="truck" style={{ height: "3rem" }} />
-            </div>
-          </div> */}
-          {/* <div className="row">
-            <div className="col s9 right">
-              <p style={{ textAlign: "left" }}>
-                LA-HOP does not replace homeless encampment reporting protocols.
-                Please contact your municipality.
-              </p>
-            </div>
-            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
-              <img src={tent} alt="tent" style={{ height: "3rem" }} />
-            </div>
-          </div> */}
+          
           <div className="row">
             <div className="row">
               <div className="col s6">
                 <img src={police} alt="paper" style={{ width: "30%" }} />
               </div>
               <div className="col s6">
-                <img src={hospital} alt="message" />
+                <img src={hospital} alt="message" style={{ width: "30%" }} />
               </div>
             </div>
             <div className="col s6 ">Illegal Activity</div>
@@ -228,7 +173,7 @@ class Home extends Component {
             <div className="row">
               <div className="col s3" />
               <div className="col s6">
-                bulky item pickup call your municipality.
+                Bulky items pickup call your municipality.
               </div>
               <div className="col s3" />
             </div>
