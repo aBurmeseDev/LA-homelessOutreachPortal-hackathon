@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import Map from '../Components/Map'
 
 class ProviderLocation extends Component {
     render() {
         return (
-            <h1>Provider Location</h1>
+            <div>
+
+                <Map />
+            </div>
+            
         )
     }
 }

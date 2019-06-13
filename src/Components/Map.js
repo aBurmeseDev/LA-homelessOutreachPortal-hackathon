@@ -10,15 +10,25 @@ Geocode.enableDebug();
 
 const API_KEY = "AIzaSyDvWu69XjuxqaUQnd8ZWDl7QEtEQUwNRFY"
 const mapStyles = {
+    top:"5em",
     width: '60%',
     height: '90%',
     place:null,
-    position:"static"
+    position:"absolute"
     
   };
-const resources =[
-    {category:"shelter",name:""}
-]
+const boxStyle ={
+    position:"relative"
+}
+const searchBoxStyle ={
+    position:"absolute",
+    zIndex: "3",
+    backgroundColor: "white",
+    left: "20em",
+    width: "30em",
+    top: "10em",
+    left: "20em"
+}
 
 
 class MapComponent extends Component {
@@ -43,11 +53,6 @@ class MapComponent extends Component {
         
     }
 
-    returnGeocode(address){
-
-    }
-
-
     componentWillUpdate(){
         Geocode.fromLatLng(this.state.latitude, this.state.longitude).then(
             response => {
@@ -65,24 +70,28 @@ class MapComponent extends Component {
     }
 
     render() {
-        console.log(this.state)
-        const {resources} = this.props
         return (
             <div className="container">
                 <div className="row">
                 <div className="container">
-                    <GoogleComponent apiKey={API_KEY} language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />
+
+
+
+                    <div style={searchBoxStyle}>
+                        <GoogleComponent apiKey={API_KEY}  language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />  
+                    </div>
+
                     <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
-                    <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
-                    
+                        <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
                     </Map>
+
+
+                </div>
+
                 </div>
                 </div>
-                <div className="resources">
-                   <a href="" onClick={this.filterMarkers}> <div className="shelterCat"><i id="shelter"  class="material-icons">hotel</i></div></a>
-                </div>
-                <h1>hello</h1>
-            </div>
+                
+
             
 
         );
