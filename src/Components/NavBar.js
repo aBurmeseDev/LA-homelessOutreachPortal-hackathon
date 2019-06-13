@@ -19,8 +19,8 @@ class NavBar extends Component {
           backgroundColor: "#ff3300",
           display: "flex",
           justifyContent: "space-evenly",
-          lineHeight: "50px",
-          paddingTop: "10px"
+          lineHeight: "34px",
+          paddingTop: "14px"
         }}
       >
         <a
