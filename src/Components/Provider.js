@@ -34,7 +34,7 @@ class Provider extends Component {
     render(){
 
     return (
-     
+        <BrowserRouter>
         <div>
         <nav>
         <div className="nav-wrapper">
@@ -52,11 +52,10 @@ class Provider extends Component {
         </div>
             {(this.state.component == 1)?<ProviderLocation  continue={this.nextComp}/>:((this.state.component == 2)?<ProviderForm continue={this.nextComp}/>: <ProviderContact continue={this.nextComp}/>)}
         </div>
+            </BrowserRouter>
+        
                 
     )}
 }
-
-
-
 
 export default Provider;
