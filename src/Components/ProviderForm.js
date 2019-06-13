@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import firebase from "../config/fbConfig";
 import M from "materialize-css";
 import { white } from "material-ui/styles/colors";
-
+import "./ProviderForm.css";
 class ProviderForm extends Component {
   state = {
     location: "",
@@ -41,120 +41,132 @@ class ProviderForm extends Component {
       location: ""
     });
   };
-  continue = e =>{
+  continue = e => {
     e.preventDefault();
     this.props.continue();
-  }
+  };
   render() {
-    const {handleChange} = this.props
+    const { handleChange } = this.props;
     return (
-      <div className="container">
+      <div className="row">
+        <div>2 Details</div>
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div>2 Details</div>
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s4">
-                <input name="numOfPeople" id="numOfPeople" type="number" className="validate" onChange={handleChange}/>
-                <label for="numOfPeople" 
-                  style={{ 
-                    textTransform: "uppercase",      
+                <input
+                  name="numOfPeople"
+                  id="numOfPeople"
+                  type="number"
+                  className="validate"
+                  onChange={handleChange}
+                />
+                <label
+                  for="numOfPeople"
+                  style={{
+                    textTransform: "uppercase"
                   }}
-                >How many people?</label>
+                >
+                  How many people?
+                </label>
               </div>
             </div>
-              
-              <div className="row">
-                <div className="input-field col s6">
-                  <input name="date" type="text" id="name"className="datepicker" onChange={handleChange}/>
-                  <label for="date">Name of person/people</label>
-                </div>
-              </div>
 
-              <div className="row">
-                <div for="gender" style={{
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="date"
+                  type="text"
+                  id="name"
+                  className="datepicker"
+                  onChange={handleChange}
+                />
+                <label for="date">Name of person/people</label>
+              </div>
+            </div>
+
+            <div className="row">
+              <div
+                for="gender"
+                style={{
                   color: "#9E9E9E",
                   fontSize: "15px",
                   paddingBottom: "1rem"
-
                 }}
-                >Gender</div>
-                <form action="#">
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>Male</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>Female</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>I don't know</span>
-                    </label>
-                  </p>
-                </form>
+              >
+                Gender
               </div>
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Male</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Female</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>I don't know</span>
+                  </label>
+                </p>
+              </form>
+            </div>
 
-              <div className="row">
-                <div className="input-field col s6">
-                  <input 
-                    name="phone" 
-                    type="tel" 
-                    id="number"
-                    className="datepicker" 
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    onChange={handleChange}
-                  />
-                  <label for="phone">Contact number</label>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="input-field col s6">
-                  <input
-                    name="needs"
-                    id="service"
-                    type="text"
-                    className="validate"
-                    onChange={handleChange}
-                  />
-                  <label for="needs">Service needed</label>
-                </div>
-
-                <div className="input-field col s6">
-                <input 
-                  name="details" 
-                  type="text" 
-                  className="timepicker" 
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="phone"
+                  type="tel"
+                  id="number"
+                  className="datepicker"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   onChange={handleChange}
                 />
-               
-                  <label for="details">Additional Details</label>
-                </div>
+                <label for="phone">Contact number</label>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="needs"
+                  id="service"
+                  type="text"
+                  className="validate"
+                  onChange={handleChange}
+                />
+                <label for="needs">Service needed</label>
               </div>
 
-              <a
-                className="btn red lighten-1 col s4 right modal-trigger"
-                href="#modal1"
-              >
-                CONTINUE
-              </a>
-              <div id="modal1" className="modal">
-                <div className="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
-                </div>
-                <div className="modal-footer">
-                  <a href="#!" className="modal-close waves-effect waves-green btn-flat">
-                    Agree
-                  </a>
-                </div>
+              <div className="input-field col s6">
+                <input
+                  name="details"
+                  type="text"
+                  className="timepicker"
+                  onChange={handleChange}
+                />
+
+                <label for="details">Additional Details</label>
               </div>
+            </div>
+
+            <button
+              className="btn waves-effect  right"
+              onClick={this.continue}
+              type="submit"
+              id="location"
+              name="action"
+              style={{ marginTop: "2rem", backgroundColor: "#ff3300" }}
+            >
+              Continue
+              <i class="material-icons right">send</i>
+            </button>
           </form>
         </div>
       </div>
