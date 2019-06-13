@@ -5,7 +5,8 @@ import MapComponent from "./Components/Map";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-import ProviderForm from "./Components/ProviderForm2";
+import Provider from "./Components/Provider";
+
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
         <Switch>
           <Route exact path="/maps" component={MapComponent} />
           <Route exact path="/request" component={Form} />
-          <Route exact path="/report" component={ProviderForm} />
+          <Route exact path="/report" component={Provider} />
           <Route exact path="/" component={Home} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
