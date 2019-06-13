@@ -47,7 +47,7 @@ class ProviderForm extends Component {
     this.props.continue();
   };
   render() {
-    const {handleChange} = this.props
+    const { handleChange } = this.props;
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
@@ -60,7 +60,7 @@ class ProviderForm extends Component {
                   id="numOfPeople"
                   type="number"
                   className="validate"
-                  onChange={this.handleChange}
+                  onChange={handleChange}
                 />
                 <label
                   for="numOfPeople"
@@ -72,12 +72,17 @@ class ProviderForm extends Component {
                 </label>
               </div>
             </div>
-              
-              <div className="row">
-                <div className="input-field col s6">
-                  <input name="date" type="text" id="name"className="datepicker" onChange={handleChange}/>
-                  <label for="date">Name of person/people</label>
-                </div>
+
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="date"
+                  type="text"
+                  id="name"
+                  className="datepicker"
+                  onChange={handleChange}
+                />
+                <label for="date">Name of person/people</label>
               </div>
             </div>
 
@@ -114,43 +119,41 @@ class ProviderForm extends Component {
               </form>
             </div>
 
-              <div className="row">
-                <div className="input-field col s6">
-                  <input 
-                    name="phone" 
-                    type="tel" 
-                    id="number"
-                    className="datepicker" 
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    onChange={handleChange}
-                  />
-                  <label for="phone">Contact number</label>
-                </div>
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="phone"
+                  type="tel"
+                  id="number"
+                  className="datepicker"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  onChange={handleChange}
+                />
+                <label for="phone">Contact number</label>
               </div>
             </div>
 
-              <div className="row">
-                <div className="input-field col s6">
-                  <input
-                    name="needs"
-                    id="service"
-                    type="text"
-                    className="validate"
-                    onChange={handleChange}
-                  />
-                  <label for="needs">Service needed</label>
-                </div>
-
-                <div className="input-field col s6">
-                <input 
-                  name="details" 
-                  type="text" 
-                  className="timepicker" 
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="needs"
+                  id="service"
+                  type="text"
+                  className="validate"
                   onChange={handleChange}
                 />
-               
-                  <label for="details">Additional Details</label>
-                </div>
+                <label for="needs">Service needed</label>
+              </div>
+
+              <div className="input-field col s6">
+                <input
+                  name="details"
+                  type="text"
+                  className="timepicker"
+                  onChange={handleChange}
+                />
+
+                <label for="details">Additional Details</label>
               </div>
             </div>
 
