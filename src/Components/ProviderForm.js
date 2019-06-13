@@ -111,8 +111,11 @@ class ProviderForm extends Component {
                   <label for="needs">Service needed</label>
                 </div>
 
-              <a className="btn red lighten-1 col s4 right modal-trigger" href="#modal1">
-                Continue
+              <a
+                className="btn red lighten-1 col s4 right modal-trigger"
+                href="#modal1"
+              >
+                Submit
               </a>
               <div id="modal1" className="modal">
                 <div className="modal-content">
