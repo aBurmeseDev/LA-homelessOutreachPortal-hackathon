@@ -44,7 +44,7 @@ class ProviderForm extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div>2 DETAILS</div>
+          <div className="col s3">2 Details</div>
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s2">
@@ -55,18 +55,41 @@ class ProviderForm extends Component {
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="numOfPeople">How many people?</label>
+                <label for="numOfPeople" 
+                  style={{ 
+                    textTransform: "uppercase",
+                    fontsize: "10px"
+                    
+                  }}
+                >How many people?</label>
               </div>
 
               <div className="input-field col s6">
-                <input name="date" type="text" className="datepicker" />
-                <label for="date">Date last seen</label>
+                <input 
+                  name="date" 
+                  type="text" 
+                  className="datepicker" 
+                />
+                <label for="date">Name of person/people</label>
               </div>
 
-              <div className="input-field col s3">
-                <div className="waves-effect btn-small">Male</div>
-                <div className="waves-effect btn-small">Female</div>
+              <div className="input-field col s6">
+                <input 
+                  name="date" 
+                  type="text" 
+                  className="datepicker" 
+                />
+                <label for="date">Contact number</label>
               </div>
+
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Male</span>
+                  </label>
+                </p>
+              </form>
 
               <div className="input-field col s6">
                 <input 
@@ -88,43 +111,8 @@ class ProviderForm extends Component {
                   <label for="needs">Service needed</label>
                 </div>
 
-              
-              
-
-
-
-
-
-
-
-
-
-
-
-
-              {/* <a
-                className="dropdown-trigger btn col s4 left"
-                href="#dropdown1"
-                data-target="dropdown1"
-              >
-                Services
-              </a>
-
-              <ul id="dropdown1" className="dropdown-content">
-                <li>
-                  <a href="#!">Showers</a>
-                </li>
-                <li className="divider" tabindex="-1" />
-                <li>
-                  <a href="#!">Clothes</a>
-                </li>
-                <li className="divider" tabindex="-1" />
-                <li>
-                  <a href="#!">Shelters</a>
-                </li>
-              </ul> */}
               <a className="btn red lighten-1 col s4 right modal-trigger" href="#modal1">
-                Submit
+                Continue
               </a>
               <div id="modal1" className="modal">
                 <div className="modal-content">
