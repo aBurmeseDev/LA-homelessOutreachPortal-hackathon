@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import M from "materialize-css";
 
 class ProviderContact extends Component {
+  componentDidMount() {
+    document.addEventListener("DOMContentLoaded", function() {
+      const elems = document.querySelectorAll(".modal");
+      const instances = M.Modal.init(elems);
+    });
+  }
   continue = e => {
-    e.preventDefault();
     this.props.continue();
   };
   render() {
@@ -57,16 +63,30 @@ class ProviderContact extends Component {
             </label>
           </div>
         </div>
+
         <button
-          class="btn waves-effect right"
-          onClick={this.continue}
-          type="submit"
+          className="btn waves-effect right modal-trigger"
           id="location"
           name="action"
+          data-target="modal9"
           style={{ backgroundColor: "#ff3300" }}
         >
           Sumbit<i class="material-icons right">send</i>{" "}
         </button>
+        <div id="modal9" className="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="#!"
+              className="modal-close waves-effect waves-green btn-flat"
+            >
+              Agree
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
