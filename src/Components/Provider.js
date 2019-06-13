@@ -17,7 +17,12 @@ class Provider extends Component {
         gender:"",
         numOfPeople:"",
         name:"",
-        details:""
+        details:"",
+        contactName:"",
+        contactCompany:"",
+        contactEmail:"",
+        contactPhone:""
+
     }
     handleChange = e => {
         this.setState({
@@ -70,7 +75,7 @@ class Provider extends Component {
             ?<ProviderLocation  continue={this.nextComp} getAddress={this.getLocation}/>
             :((this.state.component == 2)
             ?<ProviderForm continue={this.nextComp} handleChange={this.handleChange}/>
-            : <ProviderContact continue={this.nextComp}/>)}
+            : <ProviderContact continue={this.nextComp} handleChange={this.handleChange}/>)}
         </div>
             </BrowserRouter>
         
