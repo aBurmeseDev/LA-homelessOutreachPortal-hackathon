@@ -68,7 +68,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={hospital}
+                alt="hospital"
+                style={{ height: "5rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -79,7 +83,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={police}
+                alt="police"
+                style={{ height: "5rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -90,7 +98,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={truck}
+                alt="truck"
+                style={{ height: "5rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -101,7 +113,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={tent}
+                alt="tent"
+                style={{ height: "5rem" }}
+              />
             </div>
           </div>
         </div>
