@@ -44,59 +44,73 @@ class ProviderForm extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
+          <div className="col s3">2 Details</div>
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s6">
+              <div className="input-field col s2">
                 <input
-                  name="location"
-                  id="location"
+                  name="numOfPeople"
+                  id="numOfPeople"
                   type="text"
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label htmlFor="location">Location</label>
+                <label for="numOfPeople" 
+                  style={{ 
+                    textTransform: "uppercase",
+                    fontsize: "10px"
+                    
+                  }}
+                >How many people?</label>
               </div>
 
               <div className="input-field col s6">
-                <input name="date" type="text" className="datepicker" />
-                <label htmlFor="date">Date last seen</label>
-              </div>
-
-              <div className="input-field col s6">
-                <input name="time" type="text" className="timepicker" />
-                <label htmlFor="time">Time last seen</label>
-              </div>
-              <div className="input-field col s6">
-                <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  className="validate"
-                  onChange={this.handleChange}
+                <input 
+                  name="date" 
+                  type="text" 
+                  className="datepicker" 
                 />
-                <label htmlFor="email">Email for confirmation</label>
+                <label for="date">Name of person/people</label>
               </div>
-              <a
-                className="dropdown-trigger btn col s4 left"
-                href="#dropdown1"
-                data-target="dropdown1"
-              >
-                Services
-              </a>
 
-              <ul id="dropdown1" className="dropdown-content">
-                <li>
-                  <a href="#!">Showers</a>
-                </li>
-                <li className="divider" tabIndex="-1" />
-                <li>
-                  <a href="#!">Clothes</a>
-                </li>
-                <li className="divider" tabIndex="-1" />
-                <li>
-                  <a href="#!">Shelters</a>
-                </li>
-              </ul>
+              <div className="input-field col s6">
+                <input 
+                  name="date" 
+                  type="text" 
+                  className="datepicker" 
+                />
+                <label for="date">Contact number</label>
+              </div>
+
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Male</span>
+                  </label>
+                </p>
+              </form>
+
+              <div className="input-field col s6">
+                <input 
+                  name="details" 
+                  type="text" 
+                  className="timepicker" 
+                />
+                <label for="details">Additional Details</label>
+              </div>
+
+                <div className="input-field col s6">
+                  <input
+                    name="needs"
+                    id="needs"
+                    type="text"
+                    className="validate"
+                    onChange={this.handleChange}
+                  />
+                  <label for="needs">Service needed</label>
+                </div>
+
               <a
                 className="btn red lighten-1 col s4 right modal-trigger"
                 href="#modal1"

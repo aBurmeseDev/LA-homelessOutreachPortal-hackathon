@@ -39,16 +39,11 @@ function Provider() {
             component={ProviderLocation}
           />
         </Switch>
-<<<<<<< HEAD
-      </div>
-    </BrowserRouter>
-  );
-=======
-        </BrowserRouter>
         </div>
+        </BrowserRouter>
+        
                 
     )
->>>>>>> master
 }
 
 export default Provider;

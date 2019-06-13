@@ -17,7 +17,7 @@ class Contact extends Component {
     return (
       <div className="container">
         <div className="row">
-          <h4>Contact Us</h4>
+          <h4 style={{ textTransform: "uppercase" }}>Contact Us</h4>
           <h5>We want to hear from you</h5>
           <div className="divider" />
           <br />
@@ -44,10 +44,6 @@ class Contact extends Component {
                 <label for="firstName">First Name</label>
               </div>
               <div className="input-field col s6">
-                <input type="text" id="lasttName" className="validate" />
-                <label for="lastName">Last Name</label>
-              </div>
-              <div className="input-field col s10">
                 <input type="email" id="email" className="validate" />
                 <label for="email">Email</label>
                 <span class="helper-text" data-error="Incomplete email address">
@@ -56,7 +52,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="row">
-              <div class="input-field col s10">
+              <div class="input-field col s12">
                 <textarea
                   id="textarea1"
                   placeholder="Please tell us about your issue"
@@ -67,7 +63,8 @@ class Contact extends Component {
               </div>
             </div>
             <a
-              className="btn red lighten-1 col s4 right modal-trigger"
+              className="btn col s4 right modal-trigger"
+              style = {{ backgroundColor: "#030303" }}
               href="#modal3"
             >
               Submit
