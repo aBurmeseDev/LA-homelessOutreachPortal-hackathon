@@ -10,11 +10,16 @@ Geocode.enableDebug();
 
 const API_KEY = "AIzaSyDvWu69XjuxqaUQnd8ZWDl7QEtEQUwNRFY"
 const mapStyles = {
-    width: '50%',
-    height: '50%',
-    located: false,
-    place:null
+    width: '60%',
+    height: '90%',
+    place:null,
+    position:"static"
+    
   };
+const resources =[
+    {category:"shelter",name:""}
+]
+
 
 class MapComponent extends Component {
     state={
@@ -38,6 +43,10 @@ class MapComponent extends Component {
         
     }
 
+    returnGeocode(address){
+
+    }
+
 
     componentWillUpdate(){
         Geocode.fromLatLng(this.state.latitude, this.state.longitude).then(
@@ -50,17 +59,31 @@ class MapComponent extends Component {
           );
     }
   
-    
+    filterMarkers(e){
+        e.preventDefault()
+        console.log(e.target)
+    }
+
     render() {
         console.log(this.state)
+        const {resources} = this.props
         return (
-          
             <div className="container">
-                <GoogleComponent apiKey={API_KEY} language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />
-                <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
-                <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
-                </Map>
+                <div className="row">
+                <div className="container">
+                    <GoogleComponent apiKey={API_KEY} language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />
+                    <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
+                    <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
+                    
+                    </Map>
+                </div>
+                </div>
+                <div className="resources">
+                   <a href="" onClick={this.filterMarkers}> <div className="shelterCat"><i id="shelter"  class="material-icons">hotel</i></div></a>
+                </div>
+                <h1>hello</h1>
             </div>
+            
 
         );
     }

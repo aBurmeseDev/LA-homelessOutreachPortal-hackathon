@@ -136,6 +136,7 @@ class Form extends Component {
                 </div>
               </div>
             </div>
+
           </form>
         </div>
       </div>
@@ -143,4 +144,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Form

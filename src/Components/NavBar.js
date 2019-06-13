@@ -32,13 +32,13 @@ class NavBar extends Component {
         </a>
 
         {/* dropdown */}
-        <ul id="dropdown1" class="dropdown-content">
+        <ul id="dropdown1" className="dropdown-content">
           <li style={{ backgroundColor: "#ff3300" }}>
             <a href="/report" style={{ color: "white" }}>
               LOOKING TO HELP
             </a>
           </li>
-          <li class="divider" />
+          <li className="divider" />
           <li style={{ backgroundColor: "#ff3300" }}>
             <a href="/request" style={{ color: "white" }}>
               LOOKING FOR SERVICES
@@ -47,12 +47,8 @@ class NavBar extends Component {
         </ul>
 
         <ul id="nav-mobile">
-          <li
-            style={{
-              borderRight: "0.1px solid #fff"
-            }}
-          >
-            <NavLink class="dropdown-trigger" data-target="dropdown1">
+          <li style={{borderRight: "0.1px solid #fff"}}>
+            <NavLink className="dropdown-trigger" data-target="dropdown1">
               SUBMIT REQUEST
             </NavLink>
           </li>

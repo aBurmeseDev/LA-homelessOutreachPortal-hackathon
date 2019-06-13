@@ -2,10 +2,13 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import MapComponent from "./Components/Map";
+import Resources from "./Components/Resources"
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-import Provider from "./Components/Provider";
+
+import Provider from "./Components/Provider"
+
 
 
 
@@ -37,11 +40,12 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route exact path="/maps" component={MapComponent} />
+          <Route exact path="/maps" component={Resources} />
           <Route exact path="/request" component={Form} />
           <Route exact path="/report" component={Provider} />
           <Route exact path="/" component={Home} />
           <Route exact path="/contact" component={Contact} />
+          
         </Switch>
       </div>
     </BrowserRouter>
