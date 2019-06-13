@@ -7,7 +7,7 @@ import tent from "../resources/tent.png";
 import truck from "../resources/truck.png";
 import "./Home.css";
 import About from "./About";
-import ProviderForm from "./ProviderForm";
+import ProviderForm from "./ProviderForm2";
 
 class Home extends Component {
   render() {
@@ -55,7 +55,10 @@ class Home extends Component {
           <div className="row">
             <div>
               <div className="col s3 left" style={{ marginRight: "1rem" }}>
-                <img src={heart} alt="heart" style={{ height: "5rem" }} />
+                <img 
+                src={heart} 
+                alt="heart" 
+                style={{ height: "3rem" }} />
               </div>
               <p className="col s9 right" style={{ textAlign: "left" }}>
                 LA-HOP is designed to assist people experiencing homelessness in
@@ -72,7 +75,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={hospital}
+                alt="hospital"
+                style={{ height: "3rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -83,7 +90,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={police}
+                alt="police"
+                style={{ height: "3rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -94,7 +105,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={truck}
+                alt="truck"
+                style={{ height: "3rem" }}
+              />
             </div>
           </div>
           <div className="row">
@@ -105,7 +120,11 @@ class Home extends Component {
               </p>
             </div>
             <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              this
+              <img 
+                src={tent}
+                alt="tent"
+                style={{ height: "3rem" }}
+              />
             </div>
           </div>
         </div>

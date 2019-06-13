@@ -33,15 +33,7 @@ class Contact extends Component {
                     Homeless Management Information System (HMIS)
                   </option>
                   <option value="3">Grievances</option>
-                  <option value="4">Homeless Count</option>
-                  <option value="5">Homeless Services</option>
-                  <option value="6">LA-HOP</option>
-                  <option value="7">
-                    Notices of Funding Availability (NOFAs)
-                  </option>
-                  <option value="8">Outcomes/Reporting</option>
-                  <option value="9">Procurement Opportunities</option>
-                  <option value="10">Technical Web Support</option>
+                  
                 </select>
                 <label>Select From The Dropdown Menu</label>
               </div>
