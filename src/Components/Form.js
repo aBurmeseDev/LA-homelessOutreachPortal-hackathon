@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "../config/fbConfig.js";
 import M from "materialize-css";
 import { conditionalExpression } from "@babel/types";
+import "./Form.css";
 
 class Form extends Component {
   state = {
@@ -102,13 +103,16 @@ class Form extends Component {
               </div>
 
               <div className="row">
-                <div for="gender" style={{
-                  color: "#9E9E9E",
-                  fontSize: "15px",
-                  paddingBottom: "1rem"
-
-                }}
-                >Gender</div>
+                <div
+                  for="gender"
+                  style={{
+                    color: "#9E9E9E",
+                    fontSize: "15px",
+                    paddingBottom: "1rem"
+                  }}
+                >
+                  Gender
+                </div>
                 <form action="#">
                   <p>
                     <label>
@@ -127,7 +131,9 @@ class Form extends Component {
 
               <div class="input-field col s6">
                 <select multiple>
-                  <option value="" disabled>What do you need?</option>
+                  <option value="" disabled style={{ fontSize: "7px" }}>
+                    What do you need?
+                  </option>
                   <option value="1">Food</option>
                   <option value="2">Clothing</option>
                   <option value="3">Water</option>
@@ -135,7 +141,7 @@ class Form extends Component {
                   <option value="5">Medical Services</option>
                   <option value="6">Other</option>
                 </select>
-                  <label>Select all that apply</label>
+                <label>Select all that apply</label>
               </div>
 
               <div className="row">
@@ -150,27 +156,31 @@ class Form extends Component {
                 </div>
               </div>
 
-              <div class="input-field col s6">
+              <div class="input-field col s6" style={{ marginBottom: "2rem" }}>
                 <select>
-                  <option value="" disabled selected>Select below</option>
+                  <option value="" disabled selected>
+                    Select below
+                  </option>
                   <option value="1">Under 6 months</option>
                   <option value="2">6-12 months</option>
                   <option value="3">2+ years</option>
                   <option value="4">5+ years</option>
                   <option value="5">I don't know</option>
                 </select>
-                  <label>How long have you been experiencing homelessness?</label>
+                <label>How long have you been experiencing homelessness?</label>
               </div>
 
               <div class="input-field col s6">
                 <select>
-                  <option value="" disabled selected>Select below</option>
+                  <option value="" disabled selected>
+                    Select below
+                  </option>
                   <option value="1">Tent</option>
                   <option value="2">Vehicle</option>
                   <option value="3">Street</option>
                   <option value="4">Other</option>
                 </select>
-                  <label>Where do you currently reside?</label>
+                <label>Where do you currently reside?</label>
               </div>
 
               <div className="row">
@@ -184,8 +194,6 @@ class Form extends Component {
                   <label for="textarea1">If other, please specify</label>
                 </div>
               </div>
-
-
 
               <div className="row" />
 
@@ -206,7 +214,7 @@ class Form extends Component {
               </div>
               <a
                 className="btn col s4 right modal-trigger"
-                style = {{ backgroundColor: "#030303" }}
+                style={{ backgroundColor: "#030303" }}
                 href="#modal2"
               >
                 Submit
@@ -226,7 +234,6 @@ class Form extends Component {
                 </div>
               </div>
             </div>
-
           </form>
         </div>
       </div>
@@ -234,4 +241,4 @@ class Form extends Component {
   }
 }
 
-export default Form
+export default Form;

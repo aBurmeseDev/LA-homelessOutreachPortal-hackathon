@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "../config/fbConfig";
 import M from "materialize-css";
 import { white } from "material-ui/styles/colors";
+import "./ProviderForm.css";
 
 class ProviderForm extends Component {
   state = {
@@ -41,10 +42,10 @@ class ProviderForm extends Component {
       location: ""
     });
   };
-  continue = e =>{
+  continue = e => {
     e.preventDefault();
     this.props.continue();
-  }
+  };
   render() {
     return (
       <div className="container">
@@ -60,108 +61,107 @@ class ProviderForm extends Component {
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="numOfPeople" 
-                  style={{ 
-                    textTransform: "uppercase",
-                  
-                    
+                <label
+                  for="numOfPeople"
+                  style={{
+                    textTransform: "uppercase"
                   }}
-                >How many people?</label>
+                >
+                  How many people?
+                </label>
               </div>
             </div>
-              
-              <div className="row">
-                <div className="input-field col s6">
-                  <input 
-                    name="date" 
-                    type="text" 
-                    className="datepicker" 
-                  />
-                  <label for="date">Name of person/people</label>
-                </div>
-              </div>
 
-              <div className="row">
-                <div for="gender" style={{
+            <div className="row">
+              <div className="input-field col s6">
+                <input name="date" type="text" className="datepicker" />
+                <label for="date">Name of person/people</label>
+              </div>
+            </div>
+
+            <div className="row">
+              <div
+                for="gender"
+                style={{
                   color: "#9E9E9E",
                   fontSize: "15px",
                   paddingBottom: "1rem"
-
                 }}
-                >Gender</div>
-                <form action="#">
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>Male</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>Female</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input name="group1" type="radio" />
-                      <span>I don't know</span>
-                    </label>
-                  </p>
-                </form>
-              </div>
-
-              <div className="row">
-                <div className="input-field col s6">
-                  <input 
-                    name="phone" 
-                    type="tel" 
-                    className="datepicker" 
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  />
-                  <label for="phone">Contact number</label>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="input-field col s6">
-                  <input
-                    name="needs"
-                    id="needs"
-                    type="text"
-                    className="validate"
-                    onChange={this.handleChange}
-                  />
-                  <label for="needs">Service needed</label>
-                </div>
-
-                <div className="input-field col s6">
-                <input 
-                  name="details" 
-                  type="text" 
-                  className="timepicker" 
-                  />
-                  <label for="details">Additional Details</label>
-                </div>
-              </div>
-
-              <a
-                className="btn red lighten-1 col s4 right modal-trigger"
-                href="#modal1"
               >
-                CONTINUE
-              </a>
-              <div id="modal1" className="modal">
-                <div className="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
-                </div>
-                <div className="modal-footer">
-                  <a href="#!" className="modal-close waves-effect waves-green btn-flat">
-                    Agree
-                  </a>
-                </div>
+                Gender
               </div>
+              <form action="#">
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Male</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Female</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>I don't know</span>
+                  </label>
+                </p>
+              </form>
+            </div>
+
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="phone"
+                  type="tel"
+                  className="datepicker"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                />
+                <label for="phone">Contact number</label>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="input-field col s6">
+                <input
+                  name="needs"
+                  id="needs"
+                  type="text"
+                  className="validate"
+                  onChange={this.handleChange}
+                />
+                <label for="needs">Service needed</label>
+              </div>
+
+              <div className="input-field col s6">
+                <input name="details" type="text" className="timepicker" />
+                <label for="details">Additional Details</label>
+              </div>
+            </div>
+
+            <a
+              className="btn red lighten-1 col s4 right modal-trigger"
+              href="#modal1"
+            >
+              CONTINUE
+            </a>
+            <div id="modal1" className="modal">
+              <div className="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div className="modal-footer">
+                <a
+                  href="#!"
+                  className="modal-close waves-effect waves-green btn-flat"
+                >
+                  Agree
+                </a>
+              </div>
+            </div>
           </form>
         </div>
       </div>
