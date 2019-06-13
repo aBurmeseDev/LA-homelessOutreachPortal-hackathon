@@ -34,20 +34,36 @@ class NavBar extends Component {
         {/* dropdown */}
         <ul id="dropdown1" className="dropdown-content">
           <li style={{ backgroundColor: "#ff3300" }}>
-            <a href="/report" style={{ color: "white" }}>
+            <a
+              href="/report"
+              style={{
+                color: "white",
+                fontSize: "11px",
+                padding: "20px 16px",
+                fontWeight: "bolder"
+              }}
+            >
               LOOKING TO HELP
             </a>
           </li>
           <li className="divider" />
           <li style={{ backgroundColor: "#ff3300" }}>
-            <a href="/request" style={{ color: "white" }}>
+            <a
+              href="/request"
+              style={{
+                color: "white",
+                fontSize: "11px",
+                padding: "20px 16px",
+                fontWeight: "bolder"
+              }}
+            >
               LOOKING FOR SERVICES
             </a>
           </li>
         </ul>
 
         <ul id="nav-mobile">
-          <li style={{borderRight: "0.1px solid #fff"}}>
+          <li style={{ borderRight: "0.1px solid #fff" }}>
             <NavLink className="dropdown-trigger" data-target="dropdown1">
               SUBMIT REQUEST
             </NavLink>
