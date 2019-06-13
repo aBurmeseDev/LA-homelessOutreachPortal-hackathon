@@ -14,21 +14,21 @@ const mapStyles = {
     width: '60%',
     height: '90%',
     place:null,
-    position:"absolute"
+    position:"fixed"
     
   };
-const boxStyle ={
-    position:"relative"
-}
-const searchBoxStyle ={
-    position:"absolute",
-    zIndex: "3",
-    backgroundColor: "white",
-    left: "20em",
-    width: "30em",
-    top: "10em",
-    left: "20em"
-}
+// const boxStyle ={
+//     position:"relative"
+// }
+// const searchBoxStyle ={
+//     position:"absolute",
+//     zIndex: "3",
+//     backgroundColor: "white",
+//     left: "20em",
+//     width: "30em",
+//     top: "10em",
+//     left: "20em"
+// }
 
 
 class MapComponent extends Component {
@@ -42,30 +42,30 @@ class MapComponent extends Component {
 
     }
   
-    componentDidMount() {
-        navigator.geolocation.getCurrentPosition(
-            (position) =>{  this.setState({
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude,
-                lacated: true
-              });
-            }
-        );
-        
-    }
+  
 
-    componentWillUpdate(){
+    
+
+    setAddress =()=>{
         Geocode.fromLatLng(this.state.latitude, this.state.longitude).then(
             response => {
               console.log(response.results[0].formatted_address);
               this.setState({address:response.results[0].formatted_address})
-              this.props.updateAddress(this.state.address)
             },
             error => {
               console.error(error);
             }
           );
+        
+
     }
+
+    handleChange = (e) => { 
+        this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng, place:e.place})
+        this.props.getAddress(this.state.place)
+    }
+
+    
   
     filterMarkers(e){
         e.preventDefault()
@@ -76,19 +76,19 @@ class MapComponent extends Component {
         return (
             <div className="container">
                 <div className="row">
-                <div className="container">
-                    <div style={searchBoxStyle}>
-                        <GoogleComponent apiKey={API_KEY}  language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />  
-                    </div>
 
-                    <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
-                        <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
-                    </Map>
+                   
+                <GoogleComponent apiKey={API_KEY}  language={'en'} country={'country:us'} coordinates={true} onSelect={(e)=>console.log(e)} onChange={(e)=>{this.handleChange(e)}} />  
 
 
-                </div>
+                <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
+                    <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
+                </Map>
+
 
                 </div>
+
+
                 </div>
                 
 

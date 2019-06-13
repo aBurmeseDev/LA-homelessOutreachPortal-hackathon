@@ -10,11 +10,12 @@ class ProviderLocation extends Component {
         e.preventDefault();
         this.props.continue();
     }
+    
  
     render() {
         return (
             <div>
-                <Map />
+                <Map getAddress={this.props.getAddress}/>
                 <button class="btn waves-effect black" onClick={this.continue} type="submit" id="location" name="action">Continue
                     <i class="material-icons right">send</i>
                 </button>  

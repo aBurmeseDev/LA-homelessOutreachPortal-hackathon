@@ -8,8 +8,18 @@ import ProviderLocation from "./ProviderLocation";
 class Provider extends Component {
     state={
         component: 1,
-        locationInfo:null
+        address:null,
+        date: "",
+        time: "",
+        service: "",
+        email: "",
+        number:""
     }
+    handleChange = e => {
+        this.setState({
+          [e.target.id]: e.target.value
+        });
+      };
     changeComponent=(e)=>{
         if(e.target.innerHTML ==  "Location"){
             this.setState({component:1})
@@ -21,7 +31,7 @@ class Provider extends Component {
         console.log(this.state)
     }
     getLocation=(info)=>{
-        this.setState({locationInfo:info})
+        this.setState({address:info})
         console.log(this.state)
     }
     nextComp = () =>{
@@ -50,7 +60,11 @@ class Provider extends Component {
         <div className="formContainer">
 
         </div>
-            {(this.state.component == 1)?<ProviderLocation  continue={this.nextComp}/>:((this.state.component == 2)?<ProviderForm continue={this.nextComp}/>: <ProviderContact continue={this.nextComp}/>)}
+            {(this.state.component == 1)
+            ?<ProviderLocation  continue={this.nextComp} getAddress={this.getLocation}/>
+            :((this.state.component == 2)
+            ?<ProviderForm continue={this.nextComp} handleChange={this.handleChange}/>
+            : <ProviderContact continue={this.nextComp}/>)}
         </div>
             </BrowserRouter>
         

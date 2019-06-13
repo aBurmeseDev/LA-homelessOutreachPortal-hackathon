@@ -22,11 +22,11 @@ class ProviderForm extends Component {
       const instance4 = M.Modal.init(elem4);
     });
   }
-  handleChange = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
-  };
+  // handleChange = e => {
+  //   this.setState({
+  //     [e.target.id]: e.target.value
+  //   });
+  // };
   handleSubmit = e => {
     e.preventDefault();
 
@@ -45,6 +45,7 @@ class ProviderForm extends Component {
     this.props.continue();
   }
   render() {
+    const {handleChange} = this.props
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
@@ -57,7 +58,7 @@ class ProviderForm extends Component {
                   id="numOfPeople"
                   type="text"
                   className="validate"
-                  onChange={this.handleChange}
+                  onChange={handleChange}
                 />
                 <label for="numOfPeople" 
                   style={{ 
@@ -73,6 +74,7 @@ class ProviderForm extends Component {
                   name="date" 
                   type="text" 
                   className="datepicker" 
+                  onChange={handleChange}
                 />
                 <label for="date">Name of person/people</label>
               </div>
@@ -82,6 +84,8 @@ class ProviderForm extends Component {
                   name="date" 
                   type="text" 
                   className="datepicker" 
+                  id="number"
+                  onChange={handleChange}
                 />
                 <label for="date">Contact number</label>
               </div>
@@ -100,6 +104,7 @@ class ProviderForm extends Component {
                   name="details" 
                   type="text" 
                   className="timepicker" 
+                  onChange={handleChange}
                 />
                 <label for="details">Additional Details</label>
               </div>
