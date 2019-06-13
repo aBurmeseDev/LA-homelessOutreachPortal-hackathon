@@ -24,11 +24,7 @@ class NavBar extends Component {
           paddingTop: "14px"
         }}
       >
-        <a
-          className="brand-logo hide-on-med-and-down"
-          href="/"
-          style={{ position: "relative" }}
-        >
+        <a className="brand-logo hide-on-med-and-down" href="/" style={{ position: "relative" }}>
           LA-HOP
         </a>
 

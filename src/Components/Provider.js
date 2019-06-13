@@ -1,49 +1,61 @@
-import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import React, {Component} from "react";
+import { BrowserRouter, Switch, Route,Link } from "react-router-dom";
 import ProviderContact from "./ProviderContact";
 import ProviderForm from "./ProviderForm";
 import ProviderLocation from "./ProviderLocation";
 
-function Provider() {
-  return (
-    <BrowserRouter>
-      <div>
+
+class Provider extends Component {
+    state={
+        component: 1,
+        locationInfo:null
+    }
+    changeComponent=(e)=>{
+        if(e.target.innerHTML ==  "Location"){
+            this.setState({component:1})
+        }else if(e.target.innerHTML ==  "Details"){
+            this.setState({component:2})
+        }else{
+            this.setState({component:3})
+        }
+        console.log(this.state)
+    }
+    getLocation=(info)=>{
+        this.setState({locationInfo:info})
+        console.log(this.state)
+    }
+    nextComp = () =>{
+        const {component} = this.state
+        this.setState({
+            component : component + 1
+        })
+    }
+ 
+    render(){
+
+    return (
+        <BrowserRouter>
+        <div>
         <nav>
-          <div className="nav-wrapper">
-            <div className="col s12">
-              <a className="breadcrumb">
-                <Link to={`/report/provider-location`}>Location</Link>
-              </a>
-
-              <a className="breadcrumb">
-                <Link to={`/report/provider-form`}>Details</Link>
-              </a>
-
-              <a className="breadcrumb">
-                <Link to={`/report/provider-contact`}>Contact</Link>
-              </a>
-            </div>
+        <div className="nav-wrapper">
+          <div className="col s12">
+          
+                <a  className="breadcrumb" ><Link onClick={this.changeComponent}>Location</Link></a>
+                <a  className="breadcrumb" ><Link onClick={this.changeComponent} >Details</Link></a>
+                <a  className="breadcrumb" ><Link onClick={this.changeComponent} >Contact</Link></a>
+            
           </div>
-        </nav>
-
-        <Switch>
-          <Route
-            exact
-            path="/report/provider-contact"
-            component={ProviderContact}
-          />
-          <Route exact path="/report/provider-form" component={ProviderForm} />
-          <Route
-            exact
-            path="/report/provider-location"
-            component={ProviderLocation}
-          />
-        </Switch>
         </div>
-        </BrowserRouter>
+        </nav>
+        <div className="formContainer">
+
+        </div>
+            {(this.state.component == 1)?<ProviderLocation  continue={this.nextComp}/>:((this.state.component == 2)?<ProviderForm continue={this.nextComp}/>: <ProviderContact continue={this.nextComp}/>)}
+        </div>
+            </BrowserRouter>
         
                 
-    )
+    )}
 }
 
 export default Provider;

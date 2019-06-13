@@ -41,6 +41,10 @@ class ProviderForm extends Component {
       location: ""
     });
   };
+  continue = e =>{
+    e.preventDefault();
+    this.props.continue();
+  }
   render() {
     return (
       <div className="container">
@@ -99,6 +103,8 @@ class ProviderForm extends Component {
                   >Female</label>
                 </div>
               </div>
+              <a className="dropdown-trigger btn col s4 left" href="" data-target="dropdown1">Services
+              </a>
 
               <div className="row">
                 <div className="input-field col s6">
@@ -146,10 +152,7 @@ class ProviderForm extends Component {
                   <p>A bunch of text</p>
                 </div>
                 <div className="modal-footer">
-                  <a
-                    href="#!"
-                    className="modal-close waves-effect waves-green btn-flat"
-                  >
+                  <a href="#!" className="modal-close waves-effect waves-green btn-flat">
                     Agree
                   </a>
                 </div>
