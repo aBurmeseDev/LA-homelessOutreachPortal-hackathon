@@ -21,6 +21,8 @@ class ProviderForm extends Component {
       const instance3 = M.Timepicker.init(elem3);
       const elem4 = document.querySelectorAll(".modal");
       const instance4 = M.Modal.init(elem4);
+      const elem5 = document.querySelectorAll("select");
+      const instance5 = M.FormSelect.init(elem5);
     });
   }
   handleChange = e => {
@@ -123,27 +125,30 @@ class ProviderForm extends Component {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="input-field col s6">
-                  <input
-                    name="needs"
-                    id="needs"
-                    type="text"
-                    className="validate"
-                    onChange={this.handleChange}
-                  />
-                  <label for="needs">Service needed</label>
-                </div>
-
-                <div className="input-field col s6">
-                <input 
-                  name="details" 
-                  type="text" 
-                  className="timepicker" 
-                  />
-                  <label for="details">Additional Details</label>
-                </div>
+              <div className="input-field col s6">
+                <select multiple>
+                  <option value="" disabled>What do you need?</option>
+                  <option value="1">Food</option>
+                  <option value="2">Clothing</option>
+                  <option value="3">Water</option>
+                  <option value="4">Shelter</option>
+                  <option value="5">Medical Services</option>
+                  <option value="6">Other</option>
+                </select>
+                  <label>Select all that apply</label>
               </div>
+
+              {/* <div className="row">
+                <div className="input-field col s12">
+                  <textarea
+                    id="textarea1"
+                    placeholder="Please specify"
+                    className="materialize-textarea characterCounter"
+                    data-length="120"
+                  />
+                  <label for="textarea1">If other, please specify</label>
+                </div>
+              </div> */}
 
               <a
                 className="btn red lighten-1 col s4 right modal-trigger"
