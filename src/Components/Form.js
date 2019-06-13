@@ -62,7 +62,7 @@ class Form extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
+        <div className="row" style={{ marginTop: "3rem" }}>
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s6">
