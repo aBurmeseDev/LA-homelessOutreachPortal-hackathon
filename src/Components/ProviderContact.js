@@ -10,7 +10,7 @@ class ProviderContact extends Component {
     return (
       <div className="row">
         <div>3 Contact</div>
-        <h1>Provider Contact</h1>
+
         <div class="row">
           <div class="input-field col s12">
             <input
@@ -63,6 +63,7 @@ class ProviderContact extends Component {
           type="submit"
           id="location"
           name="action"
+          style={{ backgroundColor: "#ff3300" }}
         >
           Sumbit<i class="material-icons right">send</i>{" "}
         </button>
