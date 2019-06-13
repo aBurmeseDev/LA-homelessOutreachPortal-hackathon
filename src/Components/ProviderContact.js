@@ -5,8 +5,8 @@ class ProviderContact extends Component {
   state = {};
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
-      var elems = document.querySelectorAll(".dropdown-trigger");
-      var instances = M.Dropdown.init(elems);
+      const elems = document.querySelectorAll(".dropdown-trigger");
+      const instances = M.Dropdown.init(elems);
     });
   }
   render() {
@@ -16,14 +16,21 @@ class ProviderContact extends Component {
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s12">
-                <input
-                  id="role"
-                  type="text"
-                  className="validate"
-                  onChange={this.handleChange}
-                  required
-                />
-                <label htmlFor="role">ROLE</label>
+                <a
+                  className="dropdown-trigger btn"
+                  href="#dropdown5"
+                  data-target="#dropdown5"
+                >
+                  Drop Me!
+                </a>
+                <ul id="dropdown5" className="dropdown-content">
+                  <li>
+                    <a href="#!">one</a>
+                  </li>
+                  <li>
+                    <a href="#!">two</a>
+                  </li>
+                </ul>
               </div>
               <div className="input-field col s12">
                 <input
