@@ -6,11 +6,8 @@ import Resources from "./Components/Resources"
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-
 import Provider from "./Components/Provider"
-import ProviderContact from "./Components/ProviderContact";
-import ProviderForm from "./Components/ProviderForm";
-import ProviderLocation from "./Components/ProviderLocation";
+
 
 
 
