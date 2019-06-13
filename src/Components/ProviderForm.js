@@ -105,7 +105,7 @@ class ProviderForm extends Component {
                   <input 
                     name="phone" 
                     type="tel" 
-                    id
+                    id="number"
                     className="datepicker" 
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     onChange={handleChange}

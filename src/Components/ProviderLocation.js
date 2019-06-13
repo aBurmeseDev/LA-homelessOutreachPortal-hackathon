@@ -21,6 +21,7 @@ class ProviderLocation extends Component {
   };
 
   render() {
+    const {handleChange} = this.props
     return (
       <div className="row">
         <div className="row" style={{ position: "relative" }}>
