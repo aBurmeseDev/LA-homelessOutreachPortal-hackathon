@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route,Link } from "react-router-dom";
 import ProviderContact from "./ProviderContact";
 import ProviderForm from "./ProviderForm";
 import ProviderLocation from "./ProviderLocation";
+import firebase from '../config/fbConfig'
 
 
 class Provider extends Component {
@@ -28,6 +29,17 @@ class Provider extends Component {
         this.setState({
           [e.target.id]: e.target.value
         });
+      };
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log('will try to submit')
+        const requestRef = firebase.firestore().collection("requests");
+        const request = {
+          ...this.state
+        };
+    
+        requestRef.add(request);
+        this.props.history.push("/")
       };
     changeComponent=(e)=>{
         if(e.target.innerHTML ==  "Location"){
@@ -73,7 +85,7 @@ class Provider extends Component {
             ?<ProviderLocation  continue={this.nextComp} getAddress={this.getLocation}/>
             :((this.state.component == 2)
             ?<ProviderForm continue={this.nextComp} handleChange={this.handleChange}/>
-            : <ProviderContact continue={this.nextComp} handleChange={this.handleChange}/>)}
+            : <ProviderContact continue={this.nextComp} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />)}
         </div>
             </BrowserRouter>
         

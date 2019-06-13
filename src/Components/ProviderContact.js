@@ -31,7 +31,7 @@ class ProviderContact extends Component {
                     <label class="active" for="company">Phone</label>
                 </div>
                 </div>
-                <button class="btn waves-effect black" onClick={this.continue} type="submit" id="location" name="action">Sumbit<i class="material-icons right">send</i> </button>
+                <button class="btn waves-effect black" onClick={this.props.handleSubmit} type="submit" id="location" name="action">Sumbit<i class="material-icons right">send</i> </button>
             </div>
 
         )

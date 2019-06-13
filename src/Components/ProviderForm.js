@@ -23,24 +23,7 @@ class ProviderForm extends Component {
       const instance4 = M.Modal.init(elem4);
     });
   }
-  // handleChange = e => {
-  //   this.setState({
-  //     [e.target.id]: e.target.value
-  //   });
-  // };
-  handleSubmit = e => {
-    e.preventDefault();
-
-    const requestRef = firebase.firestore().collection("requests");
-    const request = {
-      location: this.state.location
-    };
-
-    requestRef.add(request);
-    this.setState({
-      location: ""
-    });
-  };
+ 
   continue = e =>{
     e.preventDefault();
     this.props.continue();
@@ -138,10 +121,7 @@ class ProviderForm extends Component {
                 </div>
               </div>
 
-              <a
-                className="btn red lighten-1 col s4 right modal-trigger"
-                href="#modal1"
-              >
+              <a className="btn red lighten-1 col s4 right modal-trigger">
                 CONTINUE
               </a>
               <div id="modal1" className="modal">
