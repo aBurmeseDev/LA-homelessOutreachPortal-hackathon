@@ -48,9 +48,9 @@ class ProviderForm extends Component {
   render() {
     const { handleChange } = this.props;
     return (
-      <div className="row">
-        <div>2 Details</div>
-        <div className="row" style={{ marginTop: "3rem" }}>
+      <div className="row" style={{ margin: "1.5rem" }}>
+        <div>Details</div>
+        <div className="row" style={{ marginTop: "1rem" }}>
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s4">
@@ -61,12 +61,7 @@ class ProviderForm extends Component {
                   className="validate"
                   onChange={handleChange}
                 />
-                <label
-                  for="numOfPeople"
-
-                >
-                  Number of people
-                </label>
+                <label for="numOfPeople">Number of people</label>
               </div>
             </div>
 

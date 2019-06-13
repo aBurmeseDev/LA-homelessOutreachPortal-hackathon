@@ -23,9 +23,12 @@ class ProviderLocation extends Component {
   render() {
     const { handleChange } = this.props;
     return (
-      <div className="row">
-        <div>1 Location</div>
-        <div className="row" style={{ position: "relative" }}>
+      <div className="row" style={{ margin: "1.5rem" }}>
+        <div>Location</div>
+        <div
+          className="row"
+          style={{ position: "relative", marginTop: "1rem" }}
+        >
           <Map />
         </div>
 

@@ -14,10 +14,10 @@ class ProviderContact extends Component {
   render() {
     const { handleChange } = this.props;
     return (
-      <div className="row">
-        <div>3 Contact</div>
+      <div className="row" style={{ margin: "1.5rem" }}>
+        <div>Contact</div>
 
-        <div class="row">
+        <div class="row" style={{ marginTop: "2rem" }}>
           <div class="input-field col s12">
             <input
               id="contactName"
@@ -79,9 +79,7 @@ class ProviderContact extends Component {
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
-            <a
-              className="modal-close waves-effect waves-green btn-flat"
-            >
+            <a className="modal-close waves-effect waves-green btn-flat">
               Agree
             </a>
           </div>
