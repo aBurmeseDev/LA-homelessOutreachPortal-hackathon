@@ -97,12 +97,12 @@ class ProviderLocation extends Component {
             </div>
           </div>
           <button
-            className="btn waves-effect  right"
+            className="btn  waves-effect  right"
             onClick={this.continue}
             type="submit"
             id="location"
             name="action"
-            style={{ marginTop: "0.1rem", backgroundColor: "#ff3300" }}
+            style={{ marginTop: "0.1rem", backgroundColor: "#000000" }}
           >
             Continue
             <i class="material-icons right">send</i>
