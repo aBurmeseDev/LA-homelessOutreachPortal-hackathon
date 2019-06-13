@@ -5,7 +5,7 @@ import MapComponent from "./Components/Map";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-import ProviderForm from "./Components/ProviderForm";
+import ProviderForm from "./Components/ProviderForm2";
 
 
 function App() {

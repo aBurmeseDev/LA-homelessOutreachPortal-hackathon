@@ -7,7 +7,7 @@ import tent from "../resources/tent.png";
 import truck from "../resources/truck.png";
 import "./Home.css";
 import About from "./About";
-import ProviderForm from "./ProviderForm";
+import ProviderForm from "./ProviderForm2";
 
 class Home extends Component {
   render() {
