@@ -13,18 +13,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="request">
-          <a className="btn help" href="/report" style={{ color: "#ff3300" }}>
-            Looking to help
-          </a>
-          <a
-            className="btn service"
-            href="/request"
-            style={{ color: "#ff3300" }}
-          >
-            Looking for services
-          </a>
-        </div>
         <div style={{ position: "relative" }}>
           <img
             src={landingImg}
@@ -37,6 +25,18 @@ class Home extends Component {
               WE CONNECT PEOPLE IN NEED TO SERVICES AND HOUSING{" "}
             </span>
           </div>
+        </div>
+        <div className="request">
+          <a className="btn help" href="/report" style={{ color: "#ff3300" }}>
+            Looking to help
+          </a>
+          <a
+            className="btn service"
+            href="/request"
+            style={{ color: "#ff3300" }}
+          >
+            Looking for services
+          </a>
         </div>
         <div className="row" style={{ textAlign: "center" }}>
           <div
@@ -54,11 +54,8 @@ class Home extends Component {
 
           <div className="row">
             <div>
-              <div className="col s3 left" style={{ marginRight: "1rem" }}>
-                <img 
-                src={heart} 
-                alt="heart" 
-                style={{ height: "3rem" }} />
+              <div className="col s3 left" style={{ paddingTop: "1rem" }}>
+                <img src={heart} alt="heart" style={{ height: "3rem" }} />
               </div>
               <p className="col s9 right" style={{ textAlign: "left" }}>
                 LA-HOP is designed to assist people experiencing homelessness in
@@ -74,12 +71,8 @@ class Home extends Component {
                 For medical or mental health emergencies, please call 911.
               </p>
             </div>
-            <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              <img 
-                src={hospital}
-                alt="hospital"
-                style={{ height: "3rem" }}
-              />
+            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
+              <img src={hospital} alt="hospital" style={{ height: "3rem" }} />
             </div>
           </div>
           <div className="row">
@@ -89,12 +82,8 @@ class Home extends Component {
                 enforcement agency.
               </p>
             </div>
-            <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              <img 
-                src={police}
-                alt="police"
-                style={{ height: "3rem" }}
-              />
+            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
+              <img src={police} alt="police" style={{ height: "3rem" }} />
             </div>
           </div>
           <div className="row">
@@ -104,12 +93,8 @@ class Home extends Component {
                 removal, please contact your municipality.
               </p>
             </div>
-            <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              <img 
-                src={truck}
-                alt="truck"
-                style={{ height: "3rem" }}
-              />
+            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
+              <img src={truck} alt="truck" style={{ height: "3rem" }} />
             </div>
           </div>
           <div className="row">
@@ -119,12 +104,8 @@ class Home extends Component {
                 Please contact your municipality.
               </p>
             </div>
-            <div className="col s3 left" style={{ marginRight: "1rem" }}>
-              <img 
-                src={tent}
-                alt="tent"
-                style={{ height: "3rem" }}
-              />
+            <div className="col s3 left" style={{ paddingTop: "1rem" }}>
+              <img src={tent} alt="tent" style={{ height: "3rem" }} />
             </div>
           </div>
         </div>
