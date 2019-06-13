@@ -96,14 +96,6 @@ class Form extends Component {
           
         </div>
               <div className="input-field col s6">
-               <div className="file-field input-field">
-                <div className="red btn">
-                  <span>File</span>
-                  <input type="file" onChange={this.handleImage} multiple />
-
-                </div>
-              </div>
-              <div className="input-field col s6">
                 <div className="file-field input-field">
                   <div className="red btn">
                     <span>File</span>
@@ -117,7 +109,6 @@ class Form extends Component {
                     />
                   </div>
                 </div>
-              </div>
             </div>
             <a
               className="btn red lighten-1 col s4 right modal-trigger"
@@ -138,6 +129,7 @@ class Form extends Component {
                   Agree
                 </a>
               </div>
+            </div>
             </div>
           </form>
         </div>

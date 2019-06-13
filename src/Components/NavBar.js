@@ -57,7 +57,7 @@ class NavBar extends Component {
             </NavLink>
           </li>
           <li style={{ borderRight: "0.1px solid #fff" }}>
-            <NavLink to={"/aboutus"}> RESOURCES </NavLink>
+            <NavLink to={"/resources"}> RESOURCES </NavLink>
           </li>
           <li>
             <NavLink to={"/contact"}> CONTACT </NavLink>
