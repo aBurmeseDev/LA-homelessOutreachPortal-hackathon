@@ -37,7 +37,9 @@ class Provider extends Component {
         <BrowserRouter>
         <div>
         <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper" style={{
+            paddingLeft: "3rem"
+        }}>
           <div className="col s12">
           
                 <a  className="breadcrumb" ><Link onClick={this.changeComponent}>Location</Link></a>
