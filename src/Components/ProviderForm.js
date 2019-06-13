@@ -3,7 +3,6 @@ import firebase from "../config/fbConfig";
 import M from "materialize-css";
 import { white } from "material-ui/styles/colors";
 import "./ProviderForm.css";
-
 class ProviderForm extends Component {
   state = {
     location: "",
@@ -49,9 +48,9 @@ class ProviderForm extends Component {
   render() {
     const { handleChange } = this.props;
     return (
-      <div className="container">
+      <div className="row">
+        <div>2 Details</div>
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div>2 Details</div>
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s4">
@@ -157,26 +156,17 @@ class ProviderForm extends Component {
               </div>
             </div>
 
-            <a
-              className="btn red lighten-1 col s4 right modal-trigger"
-              href="#modal1"
+            <button
+              className="btn waves-effect  right"
+              onClick={this.continue}
+              type="submit"
+              id="location"
+              name="action"
+              style={{ marginTop: "2rem" }}
             >
-              CONTINUE
-            </a>
-            <div id="modal1" className="modal">
-              <div className="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-              </div>
-              <div className="modal-footer">
-                <a
-                  href="#!"
-                  className="modal-close waves-effect waves-green btn-flat"
-                >
-                  Agree
-                </a>
-              </div>
-            </div>
+              Continue
+              <i class="material-icons right">send</i>
+            </button>
           </form>
         </div>
       </div>
