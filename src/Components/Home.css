@@ -32,3 +32,8 @@ body {
   position: relative;
   margin-top: 2rem;
 }
+@media only screen and (min-width: 768px) {
+  .s6 {
+    text-align: center !important;
+  }
+}
