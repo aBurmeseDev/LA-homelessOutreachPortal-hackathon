@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import M from "materialize-css";
+
 
 class ProviderContact extends Component {
     continue = e =>{
@@ -7,13 +7,33 @@ class ProviderContact extends Component {
         this.props.continue();
     }
     render() {
+        const {handleChange} = this.props
         return (
-            <div className="container">
-                <h1>Provider Contact</h1>
-                <button class="btn waves-effect black" onClick={this.continue} type="submit" id="location" name="action">Sumbit
-                        <i class="material-icons right">send</i>
-                </button>
+
+            <div>
+            <div>3 Contact</div>
+            <h1>Provider Contact</h1>
+                <div class="row">
+                <div class="input-field col s6">
+                    <input id="contactName" onChange={handleChange} type="text" class="validate" />
+                    <label class="active" for="contactName">Your Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="contactCompany" onChange={handleChange} type="text" class="validate" />
+                    <label class="active" for="company">Company/Affiliation</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="contactEmail" onChange={handleChange} type="text" class="validate" />
+                    <label class="active" for="company">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="contactPhone" onChange={handleChange} type="text" class="validate" />
+                    <label class="active" for="company">Phone</label>
+                </div>
+                </div>
+                <button class="btn waves-effect black" onClick={this.continue} type="submit" id="location" name="action">Sumbit<i class="material-icons right">send</i> </button>
             </div>
+
         )
     }
 }
