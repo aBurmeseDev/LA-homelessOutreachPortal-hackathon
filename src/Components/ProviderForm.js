@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../config/fbConfig";
 import M from "materialize-css";
+import { white } from "material-ui/styles/colors";
 
 class ProviderForm extends Component {
   state = {
@@ -49,83 +50,97 @@ class ProviderForm extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div className="col s3">2 Details</div>
-          <form className="col s12" onSubmit={this.handleSubmit}>
+          <div>2 Details</div>
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s2">
-                <input
-                  name="numOfPeople"
-                  id="numOfPeople"
-                  type="text"
-                  className="validate"
-                  onChange={handleChange}
-                />
+              <div className="input-field col s4">
+                <input name="numOfPeople" id="numOfPeople" type="number" className="validate" onChange={handleChange}/>
                 <label for="numOfPeople" 
                   style={{ 
-                    textTransform: "uppercase",
-                    fontsize: "10px"
-                    
+                    textTransform: "uppercase",      
                   }}
                 >How many people?</label>
               </div>
-
-              <div className="input-field col s6">
-                <input 
-                  name="date" 
-                  type="text" 
-                  className="datepicker" 
-                  onChange={handleChange}
-                />
-                <label for="date">Name of person/people</label>
+            </div>
+              
+              <div className="row">
+                <div className="input-field col s6">
+                  <input name="date" type="text" id="name"className="datepicker" onChange={handleChange}/>
+                  <label for="date">Name of person/people</label>
+                </div>
               </div>
 
-              <div className="input-field col s6">
-                <input 
-                  name="date" 
-                  type="text" 
-                  className="datepicker" 
-                  id="number"
-                  onChange={handleChange}
-                />
-                <label for="date">Contact number</label>
+              <div className="row">
+                <div for="gender" style={{
+                  color: "#9E9E9E",
+                  fontSize: "15px",
+                  paddingBottom: "1rem"
+
+                }}
+                >Gender</div>
+                <form action="#">
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Male</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Female</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>I don't know</span>
+                    </label>
+                  </p>
+                </form>
               </div>
 
-              <form action="#">
-                <p>
-                  <label>
-                    <input name="group1" type="radio" />
-                    <span>Male</span>
-                  </label>
-                </p>
-              </form>
+              <div className="row">
+                <div className="input-field col s6">
+                  <input 
+                    name="phone" 
+                    type="tel" 
+                    id="number"
+                    className="datepicker" 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    onChange={handleChange}
+                  />
+                  <label for="phone">Contact number</label>
+                </div>
+              </div>
 
-              <div className="input-field col s6">
+              <div className="row">
+                <div className="input-field col s6">
+                  <input
+                    name="needs"
+                    id="service"
+                    type="text"
+                    className="validate"
+                    onChange={handleChange}
+                  />
+                  <label for="needs">Service needed</label>
+                </div>
+
+                <div className="input-field col s6">
                 <input 
                   name="details" 
                   type="text" 
+                  id="details"
                   className="timepicker" 
                   onChange={handleChange}
                 />
-                <label for="details">Additional Details</label>
+               
+                  <label for="details">Additional Details</label>
+                </div>
               </div>
-              <a className="dropdown-trigger btn col s4 left" href="" data-target="dropdown1">Services
-              </a>
 
-              <ul id="dropdown1" className="dropdown-content">
-                <li>
-                  <a href="#!">Showers</a>
-                </li>
-                <li className="divider" tabindex="-1" />
-                <li>
-                  <a href="#!">Clothes</a>
-                </li>
-                <li className="divider" tabindex="-1" />
-                <li>
-                  <a href="#!">Shelters</a>
-                </li>
-              </ul>
-              <a className="btn red lighten-1 col s4 right modal-trigger"  onClick={this.continue} href="#modal1">
-                Continue
+              <a className="btn black lighten-1 col s4 right modal-trigger" onClick={this.continue}>
+                CONTINUE
               </a>
               <div id="modal1" className="modal">
                 <div className="modal-content">
@@ -138,7 +153,6 @@ class ProviderForm extends Component {
                   </a>
                 </div>
               </div>
-            </div>
           </form>
         </div>
       </div>

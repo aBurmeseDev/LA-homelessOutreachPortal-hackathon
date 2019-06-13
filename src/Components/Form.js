@@ -15,6 +15,8 @@ class Form extends Component {
     document.addEventListener("DOMContentLoaded", function() {
       const elem = document.querySelectorAll(".modal");
       const instance = M.Modal.init(elem);
+      const elem1 = document.querySelectorAll("select");
+      const instance1 = M.FormSelect.init(elem1);
     });
   }
   handleChange = e => {
@@ -78,7 +80,7 @@ class Form extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <form className="col s12" onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s6">
                 <input
@@ -98,6 +100,93 @@ class Form extends Component {
                 />
                 <label htmlFor="lastName">Last Name</label>
               </div>
+
+              <div className="row">
+                <div for="gender" style={{
+                  color: "#9E9E9E",
+                  fontSize: "15px",
+                  paddingBottom: "1rem"
+
+                }}
+                >Gender</div>
+                <form action="#">
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Male</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Female</span>
+                    </label>
+                  </p>
+                </form>
+              </div>
+
+              <div class="input-field col s6">
+                <select multiple>
+                  <option value="" disabled>What do you need?</option>
+                  <option value="1">Food</option>
+                  <option value="2">Clothing</option>
+                  <option value="3">Water</option>
+                  <option value="4">Shelter</option>
+                  <option value="5">Medical Services</option>
+                  <option value="6">Other</option>
+                </select>
+                  <label>Select all that apply</label>
+              </div>
+
+              <div className="row">
+                <div class="input-field col s12">
+                  <textarea
+                    id="textarea1"
+                    placeholder="Please specify"
+                    className="materialize-textarea characterCounter"
+                    data-length="120"
+                  />
+                  <label for="textarea1">If other, please specify</label>
+                </div>
+              </div>
+
+              <div class="input-field col s6">
+                <select>
+                  <option value="" disabled selected>Select below</option>
+                  <option value="1">Under 6 months</option>
+                  <option value="2">6-12 months</option>
+                  <option value="3">2+ years</option>
+                  <option value="4">5+ years</option>
+                  <option value="5">I don't know</option>
+                </select>
+                  <label>How long have you been experiencing homelessness?</label>
+              </div>
+
+              <div class="input-field col s6">
+                <select>
+                  <option value="" disabled selected>Select below</option>
+                  <option value="1">Tent</option>
+                  <option value="2">Vehicle</option>
+                  <option value="3">Street</option>
+                  <option value="4">Other</option>
+                </select>
+                  <label>Where do you currently reside?</label>
+              </div>
+
+              <div className="row">
+                <div class="input-field col s12">
+                  <textarea
+                    id="textarea1"
+                    placeholder="Please specify"
+                    className="materialize-textarea characterCounter"
+                    data-length="120"
+                  />
+                  <label for="textarea1">If other, please specify</label>
+                </div>
+              </div>
+
+
+
               <div className="row" />
 
               <div className="input-field col s6">
@@ -116,7 +205,8 @@ class Form extends Component {
                 </div>
               </div>
               <a
-                className="btn red lighten-1 col s4 right modal-trigger"
+                className="btn col s4 right modal-trigger"
+                style = {{ backgroundColor: "#030303" }}
                 href="#modal2"
               >
                 Submit

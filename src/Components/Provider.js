@@ -13,7 +13,11 @@ class Provider extends Component {
         time: "",
         service: "",
         email: "",
-        number:""
+        number:"",
+        gender:"",
+        numOfPeople:"",
+        name:"",
+        details:""
     }
     handleChange = e => {
         this.setState({

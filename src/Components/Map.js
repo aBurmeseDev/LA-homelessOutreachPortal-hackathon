@@ -42,7 +42,17 @@ class MapComponent extends Component {
 
     }
   
-  
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+            (position) =>{  this.setState({
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                lacated: true
+              });
+            }
+        );
+        
+    }
 
     
 
