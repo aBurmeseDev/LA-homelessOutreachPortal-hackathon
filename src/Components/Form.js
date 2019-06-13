@@ -14,7 +14,6 @@ class Form extends Component {
     this.setState({
       [e.target.id]: e.target.value
     });
-    console.log(this.state)
   };
   handleImage = e =>{
     const image = e.target.files[0]
