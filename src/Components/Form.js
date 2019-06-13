@@ -98,6 +98,34 @@ class Form extends Component {
                 />
                 <label htmlFor="lastName">Last Name</label>
               </div>
+
+              <div className="row">
+                <div for="gender" style={{
+                  color: "#9E9E9E",
+                  fontSize: "15px",
+                  paddingBottom: "1rem"
+
+                }}
+                >Gender</div>
+                <div className="btn col s1">
+                  <label for="male" style={{
+                    color: "white"
+                  }}
+                  >Male</label>
+                </div>
+
+                <div className="btn col s1">
+                  <label for="female" style={{
+                    color: "white"
+                  }}
+                  >Female</label>
+                </div>
+              </div>
+
+              
+
+
+
               <div className="row" />
 
               <div className="input-field col s6">

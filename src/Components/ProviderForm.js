@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "../config/fbConfig";
 import M from "materialize-css";
+import { white } from "material-ui/styles/colors";
 
 class ProviderForm extends Component {
   state = {
@@ -77,12 +78,25 @@ class ProviderForm extends Component {
               </div>
 
               <div className="row">
-                <label for="gender">Physical Description</label>
+                <div for="gender" style={{
+                  color: "#9E9E9E",
+                  fontSize: "15px",
+                  paddingBottom: "1rem"
+
+                }}
+                >Gender</div>
                 <div className="btn col s1">
-                  <label for="male">Male</label>
+                  <label for="male" style={{
+                    color: "white"
+                  }}
+                  >Male</label>
                 </div>
+
                 <div className="btn col s1">
-                  <label for="female">Female</label>
+                  <label for="female" style={{
+                    color: "white"
+                  }}
+                  >Female</label>
                 </div>
               </div>
 
