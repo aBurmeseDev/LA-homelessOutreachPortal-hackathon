@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route,Link } from "react-router-dom";
 import ProviderContact from "./ProviderContact";
 import ProviderForm from "./ProviderForm";
 import ProviderLocation from "./ProviderLocation";
+import "./Provider.css";
 
 
 class Provider extends Component {
@@ -55,13 +56,28 @@ class Provider extends Component {
     return (
         <BrowserRouter>
         <div>
-        <nav>
-        <div className="nav-wrapper">
+        <nav className="nav">
+        <div className="nav-wrapper" style={{
+            paddingLeft: "5rem",
+            backgroundColor: "white"
+        }}>
           <div className="col s12">
           
-                <a  className="breadcrumb" ><Link onClick={this.changeComponent}>Location</Link></a>
-                <a  className="breadcrumb" ><Link onClick={this.changeComponent} >Details</Link></a>
-                <a  className="breadcrumb" ><Link onClick={this.changeComponent} >Contact</Link></a>
+                <a className="breadcrumb"><Link onClick={this.changeComponent} style={{
+                    fontSize: "12px",
+                    textTransform: "uppercase",
+                    color: "#9E9E9E"
+                }}>Location</Link></a>
+                <a className="breadcrumb"><Link onClick={this.changeComponent} style={{
+                    fontSize: "12px",
+                    textTransform: "uppercase",
+                    color: "#9E9E9E"
+                }}>Details</Link></a>
+                <a className="breadcrumb"><Link onClick={this.changeComponent} style={{
+                    fontSize: "12px",
+                    textTransform: "uppercase",
+                    color: "#9E9E9E"
+                }}>Contact</Link></a>
             
           </div>
         </div>
