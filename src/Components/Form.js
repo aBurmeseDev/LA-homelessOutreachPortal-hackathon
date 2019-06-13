@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import firebase from "../config/fbConfig.js";
+
 import M from "materialize-css";
+
+import { conditionalExpression } from "@babel/types";
+
 
 class Form extends Component {
   state = {
-    name: "",
+    firstName: "",
     lastName: "",
-    image: null
+
+    image: null,
+    url:null
+
+
   };
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function() {
@@ -25,37 +33,47 @@ class Form extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    const { image } = this.state;
-    const uploadTask = firebase
-      .storage()
-      .ref(`images/${image.name}`)
-      .put(image);
-    const requestRef = firebase.firestore().collection("requests");
-    const request = {
-      name: this.state.name,
-      lastName: this.state.lastName
-    };
-    uploadTask.on(
-      "state_changed",
-      snapshot => {},
-      error => {
-        console.log(error);
-      },
-      () => {
-        firebase
-          .storage()
-          .ref("images")
-          .child(image.name)
-          .getDownloadURL()
-          .then(url => {
-            console.log(url);
-          });
-      }
-    );
-    requestRef.add(request);
+
+    const {firstName, lastName, image,url} = this.state
+    if(image){
+      const uploadTask = firebase.storage().ref(`images/${image.name}`).put(image);
+      uploadTask.on('state_changed',
+      (snapshot)=>{
+
+      },(error)=>{
+        console.log(error)
+      },()=>{
+        firebase.storage().ref('images').child(image.name).getDownloadURL().then(picUrl=>{
+          console.log(picUrl)
+          const requestRef = firebase.firestore().collection("requests");
+            const request = {
+              firstName: firstName,
+              lastName: lastName,
+              url: picUrl
+            }
+            console.log(request)
+            requestRef.add(request);
+          this.setState({
+            url:picUrl
+          },()=>{
+
+          
+            
+          }
+         )
+         
+        })
+      })
+    }
+
+
+    
+    
+
     this.setState({
-      name: "",
-      lastName: ""
+      firstName: "",
+      lastName: "",
+      url:null
     });
   };
 
@@ -66,31 +84,23 @@ class Form extends Component {
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s6">
-                <input
-                  id="first_name"
-                  type="text"
-                  className="validate"
-                  onChange={this.handleChange}
-                />
-                <label htmlFor="first_name">First Name</label>
+
+                <input id="firstName" type="text" className="validate" onChange={this.handleChange} />
+                <label htmlFor="firstName">First Name</label>
               </div>
               <div className="input-field col s6">
-                <input
-                  id="last_name"
-                  type="text"
-                  className="validate"
-                  onChange={this.handleChange}
-                />
-                <label htmlFor="last_name">Last Name</label>
+                <input id="lastName" type="text" className="validate" onChange={this.handleChange}/>
+                <label htmlFor="lastName">Last Name</label>
               </div>
               <div className="row">
-                <div className="input-field col s12">
-                  <textarea
-                    id="textarea2"
-                    className="materialize-textarea"
-                    data-length="120"
-                  />
-                  <label htmlFor="textarea2">Textarea</label>
+          
+        </div>
+              <div className="input-field col s6">
+               <div className="file-field input-field">
+                <div className="red btn">
+                  <span>File</span>
+                  <input type="file" onChange={this.handleImage} multiple />
+
                 </div>
               </div>
               <div className="input-field col s6">
