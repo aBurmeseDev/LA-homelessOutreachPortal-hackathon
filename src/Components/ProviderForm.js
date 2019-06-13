@@ -114,17 +114,6 @@ class ProviderForm extends Component {
               </form>
             </div>
 
-<<<<<<< HEAD
-            <div className="row">
-              <div className="input-field col s6">
-                <input
-                  name="phone"
-                  type="tel"
-                  className="datepicker"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                />
-                <label for="phone">Contact number</label>
-=======
               <div className="row">
                 <div className="input-field col s6">
                   <input 
@@ -137,27 +126,9 @@ class ProviderForm extends Component {
                   />
                   <label for="phone">Contact number</label>
                 </div>
->>>>>>> master
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div className="row">
-              <div className="input-field col s6">
-                <input
-                  name="needs"
-                  id="needs"
-                  type="text"
-                  className="validate"
-                  onChange={this.handleChange}
-                />
-                <label for="needs">Service needed</label>
-              </div>
-
-              <div className="input-field col s6">
-                <input name="details" type="text" className="timepicker" />
-                <label for="details">Additional Details</label>
-=======
               <div className="row">
                 <div className="input-field col s6">
                   <input
@@ -180,7 +151,6 @@ class ProviderForm extends Component {
                
                   <label for="details">Additional Details</label>
                 </div>
->>>>>>> master
               </div>
             </div>
 
