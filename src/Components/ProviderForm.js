@@ -105,7 +105,7 @@ class ProviderForm extends Component {
                   <input 
                     name="phone" 
                     type="tel" 
-                    id="number"
+                    id
                     className="datepicker" 
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     onChange={handleChange}
@@ -130,7 +130,6 @@ class ProviderForm extends Component {
                 <input 
                   name="details" 
                   type="text" 
-                  id="details"
                   className="timepicker" 
                   onChange={handleChange}
                 />
@@ -139,7 +138,10 @@ class ProviderForm extends Component {
                 </div>
               </div>
 
-              <a className="btn black lighten-1 col s4 right modal-trigger" onClick={this.continue}>
+              <a
+                className="btn red lighten-1 col s4 right modal-trigger"
+                href="#modal1"
+              >
                 CONTINUE
               </a>
               <div id="modal1" className="modal">
