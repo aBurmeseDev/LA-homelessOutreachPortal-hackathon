@@ -1,0 +1,15 @@
+.breadcrumb:before {
+    color: #9E9E9E
+}
+
+.breadcrumb:after {
+    color: black
+}
+
+.breadcrumb {
+    font-size: 18px;
+}
+
+.nav {
+    box-shadow: none;
+}
