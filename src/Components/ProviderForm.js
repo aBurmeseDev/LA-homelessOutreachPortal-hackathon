@@ -40,6 +40,10 @@ class ProviderForm extends Component {
       location: ""
     });
   };
+  continue = e =>{
+    e.preventDefault();
+    this.props.continue();
+  }
   render() {
     return (
       <div className="container">
@@ -99,23 +103,24 @@ class ProviderForm extends Component {
                 />
                 <label for="details">Additional Details</label>
               </div>
+              <a className="dropdown-trigger btn col s4 left" href="" data-target="dropdown1">Services
+              </a>
 
-                <div className="input-field col s6">
-                  <input
-                    name="needs"
-                    id="needs"
-                    type="text"
-                    className="validate"
-                    onChange={this.handleChange}
-                  />
-                  <label for="needs">Service needed</label>
-                </div>
-
-              <a
-                className="btn red lighten-1 col s4 right modal-trigger"
-                href="#modal1"
-              >
-                Submit
+              <ul id="dropdown1" className="dropdown-content">
+                <li>
+                  <a href="#!">Showers</a>
+                </li>
+                <li className="divider" tabindex="-1" />
+                <li>
+                  <a href="#!">Clothes</a>
+                </li>
+                <li className="divider" tabindex="-1" />
+                <li>
+                  <a href="#!">Shelters</a>
+                </li>
+              </ul>
+              <a className="btn red lighten-1 col s4 right modal-trigger"  onClick={this.continue} href="#modal1">
+                Continue
               </a>
               <div id="modal1" className="modal">
                 <div className="modal-content">
@@ -123,10 +128,7 @@ class ProviderForm extends Component {
                   <p>A bunch of text</p>
                 </div>
                 <div className="modal-footer">
-                  <a
-                    href="#!"
-                    className="modal-close waves-effect waves-green btn-flat"
-                  >
+                  <a href="#!" className="modal-close waves-effect waves-green btn-flat">
                     Agree
                   </a>
                 </div>

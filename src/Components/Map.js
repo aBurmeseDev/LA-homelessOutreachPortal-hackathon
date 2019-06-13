@@ -37,7 +37,8 @@ class MapComponent extends Component {
         longitude: null,
         isMarkerShown: false,
         query: '',
-        place:null
+        place:null,
+        address:null
 
     }
   
@@ -57,6 +58,8 @@ class MapComponent extends Component {
         Geocode.fromLatLng(this.state.latitude, this.state.longitude).then(
             response => {
               console.log(response.results[0].formatted_address);
+              this.setState({address:response.results[0].formatted_address})
+              this.props.updateAddress(this.state.address)
             },
             error => {
               console.error(error);
@@ -74,9 +77,6 @@ class MapComponent extends Component {
             <div className="container">
                 <div className="row">
                 <div className="container">
-
-
-
                     <div style={searchBoxStyle}>
                         <GoogleComponent apiKey={API_KEY}  language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />  
                     </div>
