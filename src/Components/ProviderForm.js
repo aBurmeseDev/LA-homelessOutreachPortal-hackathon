@@ -50,9 +50,9 @@ class ProviderForm extends Component {
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
           <div>2 Details</div>
-          <form className="col s12" onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s2">
+              <div className="input-field col s4">
                 <input
                   name="numOfPeople"
                   id="numOfPeople"
@@ -63,7 +63,7 @@ class ProviderForm extends Component {
                 <label for="numOfPeople" 
                   style={{ 
                     textTransform: "uppercase",
-                    fontsize: "6px"
+                  
                     
                   }}
                 >How many people?</label>
@@ -89,7 +89,27 @@ class ProviderForm extends Component {
 
                 }}
                 >Gender</div>
-                <div className="btn col s1">
+                <form action="#">
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Male</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Female</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>I don't know</span>
+                    </label>
+                  </p>
+                </form>
+                {/* <div className="btn col s1">
                   <label for="male" style={{
                     color: "white"
                   }}
@@ -101,10 +121,8 @@ class ProviderForm extends Component {
                     color: "white"
                   }}
                   >Female</label>
-                </div>
+                </div> */}
               </div>
-              <a className="dropdown-trigger btn col s4 left" href="" data-target="dropdown1">Services
-              </a>
 
               <div className="row">
                 <div className="input-field col s6">
