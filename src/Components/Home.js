@@ -8,10 +8,14 @@ class Home extends Component {
     return (
       <div>
         <div className="request">
-          <a className="btn help" href="/report">
+          <a className="btn help" href="/report" style={{ color: "#ff3300" }}>
             Looking to help
           </a>
-          <a className="btn service" href="/request">
+          <a
+            className="btn service"
+            href="/request"
+            style={{ color: "#ff3300" }}
+          >
             Looking for services
           </a>
         </div>
