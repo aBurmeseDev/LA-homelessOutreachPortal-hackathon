@@ -55,11 +55,7 @@ class Home extends Component {
           <div className="row">
             <div>
               <div className="col s3 left" style={{ marginRight: "1rem" }}>
-                <img 
-                  src={heart}
-                  alt="heart"
-                  style={{ height: "5rem" }}
-                />
+                <img src={heart} alt="heart" style={{ height: "5rem" }} />
               </div>
               <p className="col s9 right" style={{ textAlign: "left" }}>
                 LA-HOP is designed to assist people experiencing homelessness in
@@ -114,6 +110,18 @@ class Home extends Component {
           </div>
         </div>
         <About />
+        <div className="request">
+          <a className="btn help" href="/report" style={{ color: "#ff3300" }}>
+            Looking to help
+          </a>
+          <a
+            className="btn service"
+            href="/request"
+            style={{ color: "#ff3300" }}
+          >
+            Looking for services
+          </a>
+        </div>
       </div>
     );
   }
