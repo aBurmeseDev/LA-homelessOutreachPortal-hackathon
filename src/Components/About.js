@@ -16,7 +16,7 @@ class About extends Component {
             <div className="container">
                 <ul class="collapsible expandable">
                     <li>
-                        <div className="collapsible-header">When should I fill out an outreach request?</div>
+                        <div className="collapsible-header"><i className="small material-icons">expand_more</i>When should I fill out an outreach request?</div>
                         <div className="collapsible-body"><span>Did you see someone experiencing homelessness who needs help? Notice a homeless neighbor who seems to be struggling with their physical and/or mental health? Then you can help them by filling out an outreach request and alert us as to any specific concerns you may have regarding the person’s well-being. As outreach capacity is limited, requests for those with more serious medical and/or mental health needs may be prioritized.</span></div>
                     </li>
                     <li>

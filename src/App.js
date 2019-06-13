@@ -6,7 +6,10 @@ import Resources from "./Components/Resources"
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-import ProviderForm from "./Components/ProviderForm";
+
+import Provider from "./Components/Provider"
+
+
 
 
 function App() {
@@ -39,9 +42,10 @@ function App() {
         <Switch>
           <Route exact path="/maps" component={Resources} />
           <Route exact path="/request" component={Form} />
-          <Route exact path="/report" component={ProviderForm} />
+          <Route exact path="/report" component={Provider} />
           <Route exact path="/" component={Home} />
           <Route exact path="/contact" component={Contact} />
+          
         </Switch>
       </div>
     </BrowserRouter>

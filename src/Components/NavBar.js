@@ -19,8 +19,8 @@ class NavBar extends Component {
           backgroundColor: "#ff3300",
           display: "flex",
           justifyContent: "space-evenly",
-          lineHeight: "50px",
-          paddingTop: "10px"
+          lineHeight: "34px",
+          paddingTop: "14px"
         }}
       >
         <a
@@ -53,7 +53,7 @@ class NavBar extends Component {
             </NavLink>
           </li>
           <li style={{ borderRight: "0.1px solid #fff" }}>
-            <NavLink to={"/aboutus"}> RESOURCES </NavLink>
+            <NavLink to={"/resources"}> RESOURCES </NavLink>
           </li>
           <li>
             <NavLink to={"/contact"}> CONTACT </NavLink>

@@ -74,10 +74,7 @@ class MapComponent extends Component {
                     <GoogleComponent apiKey={API_KEY} language={'en'} country={'country:us'} coordinates={true} onChange={(e) => { this.setState({ latitude: e.coordinates.lat, longitude: e.coordinates.lng }) }} />
                     <Map google={this.props.google} zoom={14} style={mapStyles}  center={{lat:this.state.latitude,lng:this.state.longitude}} >
                     <Marker title={"Your Location"} name={'SOMA'}  position={{lat: this.state.latitude, lng: this.state.longitude}} />
-                    {resources && resources.map(item=>{
-                        return
-                        (<Marker title={item.name} position={item.cordinates} />)
-                    })}
+                    
                     </Map>
                 </div>
                 </div>
