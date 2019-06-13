@@ -65,9 +65,9 @@ class NavBar extends Component {
 
         <ul id="nav-mobile">
           <li style={{ borderRight: "0.1px solid #fff" }}>
-            <NavLink className="dropdown-trigger" data-target="dropdown1">
+            <a className="dropdown-trigger" data-target="dropdown1">
               SUBMIT REQUEST
-            </NavLink>
+            </a>
           </li>
           <li style={{ borderRight: "0.1px solid #fff" }}>
             <NavLink to={"/resources"}> RESOURCES </NavLink>

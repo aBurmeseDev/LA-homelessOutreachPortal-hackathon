@@ -54,17 +54,17 @@ class ProviderForm extends Component {
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="location">Location</label>
+                <label htmlFor="location">Location</label>
               </div>
 
               <div className="input-field col s6">
                 <input name="date" type="text" className="datepicker" />
-                <label for="date">Date last seen</label>
+                <label htmlFor="date">Date last seen</label>
               </div>
 
               <div className="input-field col s6">
                 <input name="time" type="text" className="timepicker" />
-                <label for="time">Time last seen</label>
+                <label htmlFor="time">Time last seen</label>
               </div>
               <div className="input-field col s6">
                 <input
@@ -74,7 +74,7 @@ class ProviderForm extends Component {
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="email">Email for confirmation</label>
+                <label htmlFor="email">Email for confirmation</label>
               </div>
               <a
                 className="dropdown-trigger btn col s4 left"
@@ -88,16 +88,19 @@ class ProviderForm extends Component {
                 <li>
                   <a href="#!">Showers</a>
                 </li>
-                <li className="divider" tabindex="-1" />
+                <li className="divider" tabIndex="-1" />
                 <li>
                   <a href="#!">Clothes</a>
                 </li>
-                <li className="divider" tabindex="-1" />
+                <li className="divider" tabIndex="-1" />
                 <li>
                   <a href="#!">Shelters</a>
                 </li>
               </ul>
-              <a className="btn red lighten-1 col s4 right modal-trigger" href="#modal1">
+              <a
+                className="btn red lighten-1 col s4 right modal-trigger"
+                href="#modal1"
+              >
                 Submit
               </a>
               <div id="modal1" className="modal">
