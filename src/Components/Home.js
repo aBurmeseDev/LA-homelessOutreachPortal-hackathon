@@ -3,6 +3,9 @@ import landingImg from "../resources/homepic.png";
 import paper from "../resources/paper.png";
 import mail from "../resources/mail.png";
 import message from "../resources/message.png";
+import truck from "../resources/truck.png";
+import police from "../resources/police.png";
+import hospital from "../resources/hospital.png";
 import HOW from "../resources/how.png";
 import WHO from "../resources/who.png";
 import "./Home.css";
@@ -202,32 +205,30 @@ class Home extends Component {
           <div className="row">
             <div className="row">
               <div className="col s6">
-                <img src={paper} alt="paper" />
+                <img src={police} alt="paper" style={{ width: "30%" }} />
               </div>
               <div className="col s6">
-                <img src={message} alt="message" />
+                <img src={hospital} alt="message" />
               </div>
             </div>
-            <div className="col s6 " style={{ textAlign: "left" }}>
-              See someone in need? Fill out an outreach request
-            </div>
-            <div className="col s6" style={{ textAlign: "left" }}>
-              Alert an outreach team about an individual’s well-being.
+            <div className="col s6 ">Illegal Activity</div>
+            <div className="col s6">Medical Emergency</div>
+
+            <div className="row">
+              <div className="col s3" />
+              <div
+                className="col s5"
+                style={{ marginTop: "2rem", paddingLeft: "2rem" }}
+              >
+                <img src={truck} alt="truck" style={{ width: "30%" }} />
+              </div>
+              <div className="col s3" />
             </div>
 
             <div className="row">
               <div className="col s3" />
-              <div className="col s5" style={{ marginTop: "2rem" }}>
-                <img src={mail} alt="mail" />
-              </div>
-              <div className="col s3" />
-            </div>
-
-            <div className="row">
-              <div className="col s3" />
-              <div className="col s6" style={{ textAlign: "left" }}>
-                Keep up to date. By providing an email address, we’ll keep you
-                updated on any progress.
+              <div className="col s6">
+                bulky item pickup call your municipality.
               </div>
               <div className="col s3" />
             </div>
