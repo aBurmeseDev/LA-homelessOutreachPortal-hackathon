@@ -44,17 +44,18 @@ class ProviderForm extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
+          <div>2 DETAILS</div>
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="input-field col s6">
+              <div className="input-field col s2">
                 <input
-                  name="location"
-                  id="location"
+                  name="numOfPeople"
+                  id="numOfPeople"
                   type="text"
                   className="validate"
                   onChange={this.handleChange}
                 />
-                <label for="location">Location</label>
+                <label for="numOfPeople">How many people?</label>
               </div>
 
               <div className="input-field col s6">
@@ -62,21 +63,46 @@ class ProviderForm extends Component {
                 <label for="date">Date last seen</label>
               </div>
 
-              <div className="input-field col s6">
-                <input name="time" type="text" className="timepicker" />
-                <label for="time">Time last seen</label>
+              <div className="input-field col s3">
+                <div className="waves-effect btn-small">Male</div>
+                <div className="waves-effect btn-small">Female</div>
               </div>
+
               <div className="input-field col s6">
-                <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  className="validate"
-                  onChange={this.handleChange}
+                <input 
+                  name="details" 
+                  type="text" 
+                  className="timepicker" 
                 />
-                <label for="email">Email for confirmation</label>
+                <label for="details">Additional Details</label>
               </div>
-              <a
+
+                <div className="input-field col s6">
+                  <input
+                    name="needs"
+                    id="needs"
+                    type="text"
+                    className="validate"
+                    onChange={this.handleChange}
+                  />
+                  <label for="needs">Service needed</label>
+                </div>
+
+              
+              
+
+
+
+
+
+
+
+
+
+
+
+
+              {/* <a
                 className="dropdown-trigger btn col s4 left"
                 href="#dropdown1"
                 data-target="dropdown1"
@@ -96,7 +122,7 @@ class ProviderForm extends Component {
                 <li>
                   <a href="#!">Shelters</a>
                 </li>
-              </ul>
+              </ul> */}
               <a className="btn red lighten-1 col s4 right modal-trigger" href="#modal1">
                 Submit
               </a>
