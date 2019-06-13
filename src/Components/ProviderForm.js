@@ -44,62 +44,61 @@ class ProviderForm extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div className="col s3">2 Details</div>
+          <div>2 Details</div>
           <form className="col s12" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="input-field col s2">
                 <input
                   name="numOfPeople"
                   id="numOfPeople"
-                  type="text"
+                  type="number"
                   className="validate"
                   onChange={this.handleChange}
                 />
                 <label for="numOfPeople" 
                   style={{ 
                     textTransform: "uppercase",
-                    fontsize: "10px"
+                    fontsize: "6px"
                     
                   }}
                 >How many people?</label>
               </div>
-
-              <div className="input-field col s6">
-                <input 
-                  name="date" 
-                  type="text" 
-                  className="datepicker" 
-                />
-                <label for="date">Name of person/people</label>
+            </div>
+              
+              <div className="row">
+                <div className="input-field col s6">
+                  <input 
+                    name="date" 
+                    type="text" 
+                    className="datepicker" 
+                  />
+                  <label for="date">Name of person/people</label>
+                </div>
               </div>
 
-              <div className="input-field col s6">
-                <input 
-                  name="date" 
-                  type="text" 
-                  className="datepicker" 
-                />
-                <label for="date">Contact number</label>
+              <div className="row">
+                <label for="gender">Physical Description</label>
+                <div className="btn col s1">
+                  <label for="male">Male</label>
+                </div>
+                <div className="btn col s1">
+                  <label for="female">Female</label>
+                </div>
               </div>
 
-              <form action="#">
-                <p>
-                  <label>
-                    <input name="group1" type="radio" />
-                    <span>Male</span>
-                  </label>
-                </p>
-              </form>
-
-              <div className="input-field col s6">
-                <input 
-                  name="details" 
-                  type="text" 
-                  className="timepicker" 
-                />
-                <label for="details">Additional Details</label>
+              <div className="row">
+                <div className="input-field col s6">
+                  <input 
+                    name="phone" 
+                    type="tel" 
+                    className="datepicker" 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  />
+                  <label for="phone">Contact number</label>
+                </div>
               </div>
 
+              <div className="row">
                 <div className="input-field col s6">
                   <input
                     name="needs"
@@ -111,11 +110,21 @@ class ProviderForm extends Component {
                   <label for="needs">Service needed</label>
                 </div>
 
+                <div className="input-field col s6">
+                <input 
+                  name="details" 
+                  type="text" 
+                  className="timepicker" 
+                  />
+                  <label for="details">Additional Details</label>
+                </div>
+              </div>
+
               <a
                 className="btn red lighten-1 col s4 right modal-trigger"
                 href="#modal1"
               >
-                Submit
+                CONTINUE
               </a>
               <div id="modal1" className="modal">
                 <div className="modal-content">
@@ -131,7 +140,6 @@ class ProviderForm extends Component {
                   </a>
                 </div>
               </div>
-            </div>
           </form>
         </div>
       </div>
