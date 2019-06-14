@@ -10,19 +10,15 @@ class Provider extends Component {
   state = {
     component: 1,
     address: null,
-    date: "",
-    time: "",
-    service: "",
-    email: "",
-    number: "",
-    gender: "",
-    numOfPeople: "",
-    name: "",
-    details: "",
-    contactName: "",
-    contactCompany: "",
-    contactEmail: "",
-    contactPhone: ""
+    date: "", //
+    service: "", //
+    number: "", //
+    numOfPeople: "", //
+    details: "", //
+    contactName: "", //
+    contactCompany: "", //
+    contactEmail: "", //
+    contactPhone: "" //
   };
   handleChange = e => {
     this.setState({

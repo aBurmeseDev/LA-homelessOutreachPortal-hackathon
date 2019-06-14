@@ -36,7 +36,7 @@ class ProviderLocation extends Component {
           <div className="row">
             <div className="col s6 l6">
               <label for="datepicker">DATE LAST SEEN</label>
-              <input type="text" class="datepicker" />
+              <input type="text" id="date" class="datepicker" />
             </div>
             <div className="col s6">
               <label>SEEN BEFORE?</label>
@@ -93,7 +93,7 @@ class ProviderLocation extends Component {
             <div className="col s12">
               <label for="textarea">DESCRIPTION OF LOCATION</label>
               <textarea
-                id="textarea1"
+                id="details"
                 className="materialize-textarea characterCounter"
                 data-length="120"
               />

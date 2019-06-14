@@ -68,13 +68,13 @@ class ProviderForm extends Component {
             <div className="row">
               <div className="input-field col s6">
                 <input
-                  name="date"
+                  name="name"
                   type="text"
                   id="name"
-                  className="datepicker"
+                  className="validate"
                   onChange={handleChange}
                 />
-                <label for="date">Name of person/people</label>
+                <label for="name">Name of person/people</label>
               </div>
             </div>
 
@@ -115,9 +115,9 @@ class ProviderForm extends Component {
               <div className="input-field col s6">
                 <input
                   name="phone"
-                  type="tel"
+                  type="text"
                   id="number"
-                  className="datepicker"
+                  className="validate"
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   onChange={handleChange}
                 />
@@ -153,7 +153,6 @@ class ProviderForm extends Component {
               className="btn waves-effect  right"
               onClick={this.continue}
               type="submit"
-              id="location"
               name="action"
               style={{ marginTop: "2rem", backgroundColor: "#000000" }}
             >

@@ -24,15 +24,19 @@ class NavBar extends Component {
           paddingTop: "14px"
         }}
       >
-        <a className="brand-logo hide-on-med-and-down" href="/" style={{ position: "relative" }}>
+        <NavLink
+          className="brand-logo hide-on-med-and-down"
+          href="/"
+          style={{ position: "relative" }}
+        >
           LA-HOP
-        </a>
+        </NavLink>
 
         {/* dropdown */}
         <ul id="dropdown1" className="dropdown-content">
           <li style={{ backgroundColor: "#ff3300" }}>
-            <a
-              href="/report"
+            <NavLink
+              to="/report"
               style={{
                 color: "white",
                 fontSize: "11px",
@@ -41,12 +45,12 @@ class NavBar extends Component {
               }}
             >
               LOOKING TO HELP
-            </a>
+            </NavLink>
           </li>
           <li className="divider" />
           <li style={{ backgroundColor: "#ff3300" }}>
-            <a
-              href="/request"
+            <NavLink
+              to="/request"
               style={{
                 color: "white",
                 fontSize: "11px",
@@ -55,7 +59,7 @@ class NavBar extends Component {
               }}
             >
               LOOKING FOR SERVICES
-            </a>
+            </NavLink>
           </li>
         </ul>
 

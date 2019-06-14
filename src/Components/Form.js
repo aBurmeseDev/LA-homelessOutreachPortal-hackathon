@@ -254,7 +254,8 @@ class Form extends Component {
                 <div class="modal-footer">
                   <a
                     href="#!"
-                    class="modal-close waves-effect waves-green btn-flat"
+                    className="modal-close waves-effect waves-green btn-flat"
+                    style={{ margin: "0" }}
                   >
                     Close
                   </a>
