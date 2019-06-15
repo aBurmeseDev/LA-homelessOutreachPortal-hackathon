@@ -16,7 +16,7 @@ body {
   background-color: rgb(255, 255, 255);
 
   border-style: none;
-  width: 10rem !important;
+  width: 12rem !important;
   font-size: 0.75rem;
   display: block;
   position: relative;
@@ -46,6 +46,6 @@ body {
     width: 65% !important;
   }
   .landingimg {
-    height: 38rem;
+    height: 42em !important;
   }
 }

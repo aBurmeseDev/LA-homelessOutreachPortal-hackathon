@@ -12,12 +12,12 @@ class ProviderContact extends Component {
     this.props.continue();
   };
   render() {
-    const { handleChange } = this.props;
+    const { handleChange, handleSubmit } = this.props;
     return (
-      <div className="row">
-        <div>3 Contact</div>
+      <div className="row" style={{ margin: "1.5rem" }}>
+        <div>Contact</div>
 
-        <div class="row">
+        <div class="row" style={{ marginTop: "2rem" }}>
           <div class="input-field col s12">
             <input
               id="contactName"
@@ -64,7 +64,7 @@ class ProviderContact extends Component {
           </div>
         </div>
 
-        <button
+        {/* <button
           className="btn  waves-effect right modal-trigger"
           id="location"
           name="action"
@@ -72,17 +72,48 @@ class ProviderContact extends Component {
           style={{ backgroundColor: "#000000	" }}
         >
           Sumbit<i class="material-icons right">send</i>{" "}
-        </button>
-        <div id="modal9" className="modal">
+        </button> */}
+        <a
+          className="btn col s4 right modal-trigger"
+          style={{ backgroundColor: "#030303" }}
+          href="#modal7"
+          onClick={handleSubmit}
+        >
+          Submit
+        </a>
+        <div id="modal7" class="modal">
           <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+            <h6 style={{ fontWeight: "bolder", textAlign: "center" }}>
+              Your Request Has Been Received:
+            </h6>
+            <p style={{ textAlign: "center" }}>Case Number - #435531</p>
+            {/* <img
+              src={submission}
+              alt="submission"
+              style={{ width: "100%", height: "auto" }}
+            /> */}
+            <h7
+              style={{
+                fontWeight: "bolder",
+                textAlign: "center",
+                marginTop: "1rem"
+              }}
+            >
+              WHAT TO DO NEXT:
+            </h7>
+            <p>
+              1. Follow-Up in 2-3 Business Days on{" "}
+              <a href="https://www.lahsa.org">https://www.lahsa.org </a>
+              to learn about your status
+            </p>
+            <p>
+              2. Visit LOCATION/RESOURCE{" "}
+              <a href="https://www.lahsa.org">HERE</a> for additional assistance
+            </p>
           </div>
           <div class="modal-footer">
-            <a
-              className="modal-close waves-effect waves-green btn-flat"
-            >
-              Agree
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+              Close
             </a>
           </div>
         </div>

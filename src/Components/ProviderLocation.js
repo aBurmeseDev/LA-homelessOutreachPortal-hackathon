@@ -23,9 +23,12 @@ class ProviderLocation extends Component {
   render() {
     const { handleChange } = this.props;
     return (
-      <div className="row">
-        <div>1 Location</div>
-        <div className="row" style={{ position: "relative" }}>
+      <div className="row" style={{ margin: "1.5rem" }}>
+        <div>Location</div>
+        <div
+          className="row"
+          style={{ position: "relative", marginTop: "1rem" }}
+        >
           <Map />
         </div>
 
@@ -33,7 +36,7 @@ class ProviderLocation extends Component {
           <div className="row">
             <div className="col s6 l6">
               <label for="datepicker">DATE LAST SEEN</label>
-              <input type="text" class="datepicker" />
+              <input type="text" id="date" class="datepicker" />
             </div>
             <div className="col s6">
               <label>SEEN BEFORE?</label>
@@ -90,7 +93,7 @@ class ProviderLocation extends Component {
             <div className="col s12">
               <label for="textarea">DESCRIPTION OF LOCATION</label>
               <textarea
-                id="textarea1"
+                id="details"
                 className="materialize-textarea characterCounter"
                 data-length="120"
               />

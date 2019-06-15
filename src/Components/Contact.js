@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import M from "materialize-css";
+import submission from "../resources/submission.png";
 
 class Contact extends Component {
   componentDidMount() {
@@ -66,21 +67,48 @@ class Contact extends Component {
             <a
               className="btn col s4 right modal-trigger"
               style={{ backgroundColor: "#030303" }}
-              href="#modal3"
+              href="#modal6"
             >
               Submit
             </a>
-            <div id="modal3" class="modal">
+            <div id="modal6" class="modal">
               <div class="modal-content">
-                <h4>Thank you for contacting us</h4>
-                <p>A bunch of text</p>
+                <h6 style={{ fontWeight: "bolder", textAlign: "center" }}>
+                  Your Request Has Been Received:
+                </h6>
+                <p style={{ textAlign: "center" }}>Case Number - #435531</p>
+                <img
+                  src={submission}
+                  alt="submission"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <h7
+                  style={{
+                    fontWeight: "bolder",
+                    textAlign: "center",
+                    marginTop: "1rem"
+                  }}
+                >
+                  WHAT TO DO NEXT:
+                </h7>
+                <p>
+                  1. Follow-Up in 2-3 Business Days on{" "}
+                  <a href="https://www.lahsa.org">https://www.lahsa.org </a>
+                  to learn about your status
+                </p>
+                <p>
+                  2. Visit LOCATION/RESOURCE{" "}
+                  <a href="https://www.lahsa.org">HERE</a> for additional
+                  assistance
+                </p>
               </div>
               <div class="modal-footer">
                 <a
                   href="#!"
-                  class="modal-close waves-effect waves-green btn-flat"
+                  className="modal-close waves-effect waves-green btn-flat"
+                  style={{ margin: "0" }}
                 >
-                  Agree
+                  Close
                 </a>
               </div>
             </div>
