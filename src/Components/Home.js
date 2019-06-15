@@ -24,8 +24,10 @@ class Home extends Component {
             className="landingimg"
           />
           <div style={{ position: "absolute", top: "5%", left: "10%" }}>
-            <h5 style={{ color: "white" }}>HELP US HELP THE COMMUNITY</h5>
-            <span style={{ color: "white" }}>
+            <h5 style={{ color: "white", fontWeight: "bolder" }}>
+              HELP US HELP THE COMMUNITY
+            </h5>
+            <span style={{ color: "white", fontWeight: "bolder" }}>
               WE CONNECT PEOPLE IN NEED TO SERVISES AND HOUSING
             </span>
           </div>
@@ -146,7 +148,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          
+
           <div className="row">
             <div className="row">
               <div className="col s6">
