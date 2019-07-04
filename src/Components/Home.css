@@ -2,7 +2,9 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
-
+.row {
+  margin-bottom: 10px;
+}
 .request {
   width: auto;
   height: 15rem;
@@ -45,6 +47,9 @@ body {
   .how-img {
     height: 16rem !important;
   }
+  .icon-size {
+    width: 30% !important;
+  }
 }
 @media only screen and (min-width: 768px) {
   .s6 {
@@ -63,6 +68,12 @@ body {
   .who {
     margin-top: 5rem;
   }
+  .icon-size {
+    width: 20% !important;
+  }
 }
-@media only screen and (max-width: 1080px) {
+@media only screen and (min-width: 1080px) {
+  .icon-size {
+    width: 10% !important;
+  }
 }

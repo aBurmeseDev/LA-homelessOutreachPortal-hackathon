@@ -129,7 +129,7 @@ class Home extends Component {
                 src={WHO}
                 alt='who'
                 className='large'
-                style={{ width: '100%', height: 'auto' }}
+                style={{ width: '100%', height: '30rem' }}
               />
             </div>
 
@@ -154,30 +154,45 @@ class Home extends Component {
             </div>
           </div>
 
-          <div className='row'>
-            <div className='row'>
+          <div className='row icons-msg'>
+            <div className='row' style={{ marginBottom: '10px' }}>
               <div className='col s6'>
-                <img src={police} alt='paper' style={{ width: '30%' }} />
+                <img
+                  src={police}
+                  alt='paper'
+                  style={{ width: '10%' }}
+                  className='icon-size'
+                />
               </div>
               <div className='col s6'>
-                <img src={hospital} alt='message' style={{ width: '30%' }} />
+                <img
+                  src={hospital}
+                  alt='message'
+                  style={{ width: '9%' }}
+                  className='icon-size'
+                />
               </div>
             </div>
             <div className='col s6 '>Illegal Activity</div>
             <div className='col s6'>Medical Emergency</div>
 
-            <div className='row'>
+            <div className='row' style={{ marginBottom: '10px' }}>
               <div className='col s3' />
               <div
-                className='col s5'
+                className='col s6'
                 style={{ marginTop: '2rem', paddingLeft: '2rem' }}
               >
-                <img src={truck} alt='truck' style={{ width: '30%' }} />
+                <img
+                  src={truck}
+                  alt='truck'
+                  style={{ width: '10%' }}
+                  className='icon-size'
+                />
               </div>
               <div className='col s3' />
             </div>
 
-            <div className='row'>
+            <div className='row' style={{ marginBottom: '10px' }}>
               <div className='col s3' />
               <div className='col s6'>
                 Bulky items pickup call your municipality.
