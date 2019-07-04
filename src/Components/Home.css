@@ -71,6 +71,9 @@ body {
   .icon-size {
     width: 20% !important;
   }
+  .video {
+    width: 70% !important;
+  }
 }
 @media only screen and (min-width: 1080px) {
   .icon-size {

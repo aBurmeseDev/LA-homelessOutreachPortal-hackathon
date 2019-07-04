@@ -58,6 +58,7 @@ class Home extends Component {
               marginTop: '2rem',
               marginBottom: '2rem'
             }}
+            className='video'
           >
             <iframe
               title='intro'
