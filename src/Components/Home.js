@@ -79,7 +79,7 @@ class Home extends Component {
           >
             Helping others doesn't have to be hard
           </h6>
-          <div className='row'>
+          <div className='row icons-msg'>
             <div className='row'>
               <div className='col s6'>
                 <img src={paper} alt='paper' />
@@ -97,7 +97,7 @@ class Home extends Component {
 
             <div className='row'>
               <div className='col s3' />
-              <div className='col s5' style={{ marginTop: '2rem' }}>
+              <div className='col s6' style={{ marginTop: '2rem' }}>
                 <img src={mail} alt='mail' />
               </div>
               <div className='col s3' />
@@ -106,19 +106,19 @@ class Home extends Component {
             <div className='row'>
               <div className='col s3' />
               <div className='col s6' style={{ textAlign: 'left' }}>
-                Keep up to date. By providing an email address, we’ll keep you
-                updated on any progress.
+                Keep up to date. By providing an email address, <br />
+                we’ll keep you updated on any progress.
               </div>
               <div className='col s3' />
             </div>
           </div>
 
           <div className='row'>
-            <div className='col s6'>
+            <div className='col s6 who'>
               <h6 style={{ fontWeight: 'bolder', marginTop: '2rem' }}>
                 WHO WE HELP
               </h6>
-              <p style={{ textAlign: 'left' }}>
+              <p style={{ textAlign: 'left', padding: '0 2rem 0 2rem' }}>
                 Our outreach teams work with homeless individuals whose “primary
                 nighttime residence is a public place not meant for human
                 habitation.”
@@ -138,13 +138,13 @@ class Home extends Component {
                 <img
                   src={HOW}
                   alt='how'
-                  className='large'
-                  style={{ width: '100%', height: '16rem' }}
+                  className='large how-img'
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className='col s6' style={{ marginTop: '3rem' }}>
                 <h6 style={{ fontWeight: 'bolder' }}>HOW WE HELP</h6>
-                <p style={{ textAlign: 'left' }}>
+                <p style={{ textAlign: 'left', padding: '0 2rem 0 2rem' }}>
                   During daylight hours, our dedicated outreach workers utilize
                   their different skills to help those in need by building a
                   trusting relationship and providing resources to those who
