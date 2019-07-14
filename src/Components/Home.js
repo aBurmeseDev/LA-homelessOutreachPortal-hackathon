@@ -28,7 +28,7 @@ class Home extends Component {
               HELP US HELP THE COMMUNITY
             </h5>
             <span style={{ color: 'white', fontWeight: 'bolder' }}>
-              WE CONNECT PEOPLE IN NEED TO SERVISES AND HOUSING
+              WE CONNECT PEOPLE IN NEED TO SERVICES AND HOUSING
             </span>
           </div>
         </div>
