@@ -24,6 +24,10 @@ body {
   display: block;
   position: relative;
 }
+.help .service :hover {
+  background-color: #ff3300;
+  color: #fff;
+}
 .service {
   margin: 0 auto;
   color: rgb(5, 5, 5);
