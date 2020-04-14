@@ -7,7 +7,7 @@ import "./NavBar.css";
 
 class NavBar extends Component {
   componentDidMount() {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const elem1 = document.querySelectorAll(".dropdown-trigger");
       const instance1 = M.Dropdown.init(elem1);
     });
@@ -29,7 +29,7 @@ class NavBar extends Component {
           href="/"
           style={{ position: "relative" }}
         >
-          LA-HOP
+          LA Homeless Outreach Portal
         </NavLink>
 
         {/* dropdown */}
