@@ -7,7 +7,7 @@ import "./NavBar.css";
 
 class NavBar extends Component {
   componentDidMount() {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const elem1 = document.querySelectorAll(".dropdown-trigger");
       const instance1 = M.Dropdown.init(elem1);
     });
@@ -17,7 +17,7 @@ class NavBar extends Component {
       <nav
         className="nav-center darken-3"
         style={{
-          backgroundColor: "#ff3300",
+          backgroundColor: "rgba(226, 42, 0, 0.85)",
           display: "flex",
           justifyContent: "space-evenly",
           lineHeight: "34px",
@@ -26,15 +26,15 @@ class NavBar extends Component {
       >
         <NavLink
           className="brand-logo hide-on-med-and-down"
-          href="/"
+          to="/"
           style={{ position: "relative" }}
         >
-          LA-HOP
+          LA Homeless Outreach Portal
         </NavLink>
 
         {/* dropdown */}
         <ul id="dropdown1" className="dropdown-content">
-          <li style={{ backgroundColor: "#ff3300" }}>
+          <li style={{ backgroundColor: "rgba(226, 42, 0, 0.85)" }}>
             <NavLink
               to="/report"
               style={{
@@ -48,7 +48,7 @@ class NavBar extends Component {
             </NavLink>
           </li>
           <li className="divider" />
-          <li style={{ backgroundColor: "#ff3300" }}>
+          <li style={{ backgroundColor: "rgba(226, 42, 0, 0.85)" }}>
             <NavLink
               to="/request"
               style={{
@@ -64,15 +64,15 @@ class NavBar extends Component {
         </ul>
 
         <ul id="nav-mobile">
-          <li style={{ borderRight: "0.1px solid #fff" }}>
+          <li style={{ borderRight: "0.1px solid #fff", fontWeight: "bolder" }}>
             <a className="dropdown-trigger" data-target="dropdown1">
               SUBMIT REQUEST
             </a>
           </li>
-          <li style={{ borderRight: "0.1px solid #fff" }}>
+          <li style={{ borderRight: "0.1px solid #fff", fontWeight: "bolder" }}>
             <NavLink to={"/resources"}> RESOURCES </NavLink>
           </li>
-          <li>
+          <li style={{ fontWeight: "bolder" }}>
             <NavLink to={"/contact"}> CONTACT </NavLink>
           </li>
         </ul>
