@@ -26,7 +26,7 @@ class NavBar extends Component {
       >
         <NavLink
           className="brand-logo hide-on-med-and-down"
-          href="/"
+          to="/"
           style={{ position: "relative" }}
         >
           LA Homeless Outreach Portal
