@@ -17,7 +17,7 @@ class NavBar extends Component {
       <nav
         className="nav-center darken-3"
         style={{
-          backgroundColor: "#ff3300",
+          backgroundColor: "rgba(226, 42, 0, 0.85)",
           display: "flex",
           justifyContent: "space-evenly",
           lineHeight: "34px",
@@ -34,7 +34,7 @@ class NavBar extends Component {
 
         {/* dropdown */}
         <ul id="dropdown1" className="dropdown-content">
-          <li style={{ backgroundColor: "#ff3300" }}>
+          <li style={{ backgroundColor: "rgba(226, 42, 0, 0.85)" }}>
             <NavLink
               to="/report"
               style={{
@@ -48,7 +48,7 @@ class NavBar extends Component {
             </NavLink>
           </li>
           <li className="divider" />
-          <li style={{ backgroundColor: "#ff3300" }}>
+          <li style={{ backgroundColor: "rgba(226, 42, 0, 0.85)" }}>
             <NavLink
               to="/request"
               style={{
