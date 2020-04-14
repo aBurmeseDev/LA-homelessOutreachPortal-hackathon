@@ -24,9 +24,9 @@ class Home extends Component {
             className='landingimg'
           />
           <div style={{ position: 'absolute', top: '10%', left: '10%' }}>
-            <h5 style={{ color: 'white', fontWeight: 'bolder' }}>
+            <h4 style={{ color: 'white', fontWeight: 'bolder' }}>
               HELP US HELP THE COMMUNITY
-            </h5>
+            </h4>
             <span style={{ color: 'white', fontWeight: 'bolder' }}>
               WE CONNECT PEOPLE IN NEED TO SERVICES AND HOUSING
             </span>
@@ -193,7 +193,7 @@ class Home extends Component {
               <div className='col s3' />
             </div>
 
-            <div className='row' style={{ marginBottom: '10px' }}>
+            <div className='row' style={{ marginBottom: '7px' }}>
               <div className='col s3' />
               <div className='col s6'>
                 Bulky items pickup call your municipality.

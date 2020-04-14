@@ -70,7 +70,7 @@ iframe {
     width: 65% !important;
   }
   .landingimg {
-    height: 42em !important;
+    height: 39em !important;
   }
   .who {
     margin-top: 5rem;
@@ -86,4 +86,8 @@ iframe {
   .icon-size {
     width: 10% !important;
   }
+  .landingimg {
+    height: 40em !important;
+  }
+  
 }
